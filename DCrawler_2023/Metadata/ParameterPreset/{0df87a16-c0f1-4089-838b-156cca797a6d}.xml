@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{0df87a16-c0f1-4089-838b-156cca797a6d}">
+		<property name="name">
+			<value>Instmash</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5e0c0cd9-8300-4d13-b89c-1ba59e214fa0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{70afa2aa-d8ea-4224-8d3c-c5f0d15d7cdf}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{70afa2aa-d8ea-4224-8d3c-c5f0d15d7cdf}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Drums</value>
+			<value>Piano</value>
+			<value>Guitar</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
