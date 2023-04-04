@@ -42,7 +42,14 @@ public static class DirectionExtensions
 
 	public static Direction Opposite(this Direction direction)
 	{
-		return (Direction)(((int)direction + 2) % 4);
+		return direction switch
+		{
+			Direction.North => Direction.South,
+			Direction.East => Direction.West,
+			Direction.South => Direction.North,
+			Direction.West => Direction.East,
+			_ => direction,
+		};
 	}
 
 	public static float ToRotation(this Direction direction)

@@ -1,21 +1,47 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
+using UnityEngine.Events;
 
+[RequireComponent(typeof(TileMovement))]
 public class PlayerController : MonoBehaviour
 {
-    [Tooltip("How long it takes to turn the player")]
-    public float TurnDuration = 0.25f;
-    [Tooltip("How long it takes to move the player")]
-    public float MoveDuration = 0.2f;
-	public bool NoClip;
+	public float TurnDuration = 0.25f;
 
-	[SerializeField]
-	private Tilemap m_Tilemap;
-	private Vector2Int m_TilePosition;
+	private Camera m_Camera;
 	private Direction m_Direction;
+	private TileMovement m_TileMovement;
+
+	public void Battle(EnemyController enemy)
+	{
+		GameEvents.Instance.OnBattleInitiated?.Invoke(enemy);
+	}
+
+	private void Awake()
+	{
+		m_TileMovement = GetComponent<TileMovement>();
+		m_Camera = GetComponentInChildren<Camera>();
+	}
+
+	private void Start()
+	{
+		CancelAnimations();
+
+		m_TileMovement.OnMoved.AddListener(CheckForInteractions);
+	}
+	
+	private void CheckForInteractions()
+	{
+		var entities = FindObjectsOfType<TileMovement>();
+
+		var interactable = entities.Where(x => x.Position == m_TileMovement.Position)
+			.Select(x => x.GetComponent<IInteractable>())
+			.Where(x => x != null)
+			.FirstOrDefault();
+
+		interactable?.Interact(gameObject);
+	}
 
 	private void Update()
 	{
@@ -40,77 +66,39 @@ public class PlayerController : MonoBehaviour
 		}
 	}
 
-	public void TurnLeft()
+	private void TurnLeft()
 	{
 		Turn(m_Direction.NextCounterClockwise());
 	}
 
-	public void TurnRight()
+	private void TurnRight()
 	{
 		Turn(m_Direction.NextClockwise());
 	}
 
-	public void Turn(Direction newDirection)
+	private void Turn(Direction newDirection)
 	{
 		CancelAnimations();
 
         m_Direction = newDirection;
 
-		LeanTween.rotateY(gameObject, newDirection.ToRotation(), TurnDuration).setEaseOutExpo();
+		LeanTween.rotateY(m_Camera.gameObject, newDirection.ToRotation(), TurnDuration).setEaseOutExpo();
 	}
 
-	public void MoveForward()
+	private void MoveForward()
 	{
-		Move(m_TilePosition + m_Direction.ToVector2Int());
+		m_TileMovement.Move(m_Direction);
 	}
 
-	public void MoveBackward()
+	private void MoveBackward()
 	{
-		Move(m_TilePosition - m_Direction.ToVector2Int());
-	}
-
-	public bool IsTileWalkable(Vector2Int position)
-	{
-		if (NoClip)
-		{
-			return true;
-		}
-
-		if (!m_Tilemap.cellBounds.Contains((Vector3Int)position))
-		{
-			return false;
-		}
-
-		var tile = m_Tilemap.GetTile<MapTile>((Vector3Int)position);
-
-		if (tile != null && !tile.Walkable)
-		{
-			return false;
-		}
-
-		return true;
-	}
-
-	public void Move(Vector2Int newPosition)
-	{
-		CancelAnimations();
-
-		if (!IsTileWalkable(newPosition))
-		{
-			return;
-		}
-
-		m_TilePosition = newPosition;
-		var worldPosition = m_Tilemap.GetCellCenterWorld((Vector3Int)m_TilePosition);
-
-		LeanTween.move(gameObject, worldPosition, MoveDuration).setEaseOutExpo();
+		m_TileMovement.Move(m_Direction.Opposite());
 	}
 
 	private void CancelAnimations()
 	{
-		LeanTween.cancel(gameObject);
+		LeanTween.cancel(m_Camera.gameObject);
 
-		transform.position = m_Tilemap.GetCellCenterWorld((Vector3Int)m_TilePosition);
-		transform.eulerAngles = new Vector3(0, m_Direction.ToRotation(), 0);
+		m_Camera.transform.eulerAngles = new Vector3(0, m_Direction.ToRotation(), 0);
 	}
 }
