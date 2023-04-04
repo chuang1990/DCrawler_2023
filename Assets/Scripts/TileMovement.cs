@@ -61,7 +61,7 @@ public class TileMovement : MonoBehaviour
 		transform.position = m_Tilemap.GetCellCenterWorld((Vector3Int)Position);
 	}
 
-	private void Start()
+	private void Awake()
 	{
 		m_Tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
 
