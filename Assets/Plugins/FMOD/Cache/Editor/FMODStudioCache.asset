@@ -1,5 +1,114 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9083787323972741110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PianoMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/PianoMash
+  Guid:
+    Data1: 94072023
+    Data2: 1254018186
+    Data3: 1579063738
+    Data4: 1420138514
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
+--- !u!114 &-8803052932759885443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DoorOpen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DoorOpen
+  Guid:
+    Data1: 1436175698
+    Data2: 1128111829
+    Data3: 601840036
+    Data4: 170379620
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5894654136611649545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/PlayerHealth
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/PlayerHealth
+  Guid:
+    Data1: 1671965580
+    Data2: 1251665442
+    Data3: -965355364
+    Data4: -888108749
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4800581154929136755}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &-5412729976017463746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Guitar
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Guitar
+  Guid:
+    Data1: 1796375854
+    Data2: 1205398040
+    Data3: 1753343381
+    Data4: 1615790587
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5253559130717115287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20,13 +129,40 @@ MonoBehaviour:
     Data4: 176506615
   Banks:
   - {fileID: 2191626475433791751}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 40717
+--- !u!114 &-4652776397048640460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/Piano
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/Piano
+  Guid:
+    Data1: -1154881702
+    Data2: 1236599569
+    Data3: 194823580
+    Data4: -2052343960
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3452322556209188865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,13 +183,40 @@ MonoBehaviour:
     Data4: -85456543
   Banks:
   - {fileID: 2191626475433791751}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 83165
+--- !u!114 &-3212313080549975817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DrumMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DrumMash
+  Guid:
+    Data1: -40332162
+    Data2: 1196638453
+    Data3: 1268578187
+    Data4: 769375077
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
 --- !u!114 &-3175200204973321547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,7 +237,7 @@ MonoBehaviour:
     Data4: 461319271
   Banks:
   - {fileID: 2191626475433791751}
-  IsStream: 1
+  IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters: []
@@ -104,6 +267,33 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1791994110938742985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DoorClose
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DoorClose
+  Guid:
+    Data1: 1725298072
+    Data2: 1273313846
+    Data3: -1916586608
+    Data4: 1952929808
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
@@ -156,13 +346,50 @@ MonoBehaviour:
   - {fileID: -2193892652178768885}
   - {fileID: -600740485445105109}
   - {fileID: -5253559130717115287}
+  - {fileID: -5412729976017463746}
+  - {fileID: 5675288984078897974}
+  - {fileID: -8803052932759885443}
+  - {fileID: -4652776397048640460}
+  - {fileID: -3212313080549975817}
+  - {fileID: 3356299520093929293}
+  - {fileID: -5894654136611649545}
+  - {fileID: -1791994110938742985}
+  - {fileID: 3383714782420191204}
+  - {fileID: -9083787323972741110}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2191626475433791751}
   StringsBanks:
   - {fileID: 2523164107246164956}
-  cacheTime: 638161121243920997
+  cacheTime: 638162324945181065
   cacheVersion: 131603
+--- !u!114 &278927069931703524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InstMash/Instmash
+  m_EditorClassIdentifier: 
+  Name: Instmash
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1045902531
+    data2: 4237892517
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drums
+  - Piano
+  - Guitar
+  Exists: 1
 --- !u!114 &2191626475433791751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,10 +405,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638161121243909561
+  lastModified: 638162324945121228
   FileSizes:
   - Name: Desktop
-    Value: 14466976
+    Value: 16397504
   Exists: 1
 --- !u!114 &2523164107246164956
 MonoBehaviour:
@@ -198,8 +425,139 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638161121243920997
+  lastModified: 638162324945181065
   FileSizes:
   - Name: Desktop
-    Value: 962
+    Value: 1506
+  Exists: 1
+--- !u!114 &3356299520093929293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/InstMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/InstMash
+  Guid:
+    Data1: 857698695
+    Data2: 1209328298
+    Data3: -1438819154
+    Data4: 50892721
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 278927069931703524}
+  - {fileID: 6780285171606448770}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3383714782420191204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/GuitarMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/GuitarMash
+  Guid:
+    Data1: -1228756580
+    Data2: 1227567387
+    Data3: -1899096677
+    Data4: -1033743008
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3750
+--- !u!114 &4800581154929136755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PlayerHealth/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 3694601960
+    data2: 707127528
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5675288984078897974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Zippo
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Zippo
+  Guid:
+    Data1: -114971567
+    Data2: 1142418495
+    Data3: 1694727054
+    Data4: 775186060
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6780285171606448770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InstMash/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 3694601960
+    data2: 707127528
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
