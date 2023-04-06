@@ -237,13 +237,13 @@ MonoBehaviour:
     Data4: 461319271
   Banks:
   - {fileID: 2191626475433791751}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 119500
+  Length: 123793
 --- !u!114 &-2193892652178768885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   - {fileID: 2191626475433791751}
   StringsBanks:
   - {fileID: 2523164107246164956}
-  cacheTime: 638163200295732343
+  cacheTime: 638163704452850163
   cacheVersion: 131603
 --- !u!114 &278927069931703524
 MonoBehaviour:
@@ -405,10 +405,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638163200295712331
+  lastModified: 638163704452850163
   FileSizes:
   - Name: Desktop
-    Value: 16397504
+    Value: 21556768
   Exists: 1
 --- !u!114 &2523164107246164956
 MonoBehaviour:
@@ -425,7 +425,7 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638163200295732343
+  lastModified: 638162133562693148
   FileSizes:
   - Name: Desktop
     Value: 1506
