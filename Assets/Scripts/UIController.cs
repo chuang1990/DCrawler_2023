@@ -42,7 +42,7 @@ public class UIController : MonoBehaviour
 		m_BattleUI.SetActive(true);
 	}
 
-	public void OnBattleFinished(EnemyController enemy)
+	public void OnBattleFinished(EnemyController enemy, BattleResult result)
 	{
 		m_BattleUI.SetActive(false);
 	}

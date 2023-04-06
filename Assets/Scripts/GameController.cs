@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
 		m_EnemyCoordinator.enabled = false;
 	}
 
-	public void OnBattleFinished(EnemyController enemy)
+	public void OnBattleFinished(EnemyController enemy, BattleResult result)
 	{
 		m_Player.enabled = true;
 		m_EnemyCoordinator.enabled = true;
