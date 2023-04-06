@@ -23,6 +23,12 @@ public class BattleUI : MonoBehaviour
 	private Sprite m_EnemyHappy;
 	[Header("UI Elements")]
 	[SerializeField]
+	private RectTransform m_HeartMeterContainer;
+	[SerializeField]
+	private RectTransform m_JoanContainer;
+	[SerializeField]
+	private RectTransform m_EnemyContainer;
+	[SerializeField]
 	private Image m_HeartMeter;
 	[SerializeField]
 	private Image m_Cursor;
@@ -46,16 +52,16 @@ public class BattleUI : MonoBehaviour
 			return;
 		}
 
-		LeanTween.move(m_Joan.rectTransform, Vector3.zero, RevealAnimationDuration)
-			 .setFrom(new Vector3(-m_Joan.rectTransform.rect.width, 0))
+		LeanTween.move(m_JoanContainer, Vector3.zero, RevealAnimationDuration)
+			 .setFrom(new Vector3(-m_JoanContainer.rect.width, 0))
 			.setEaseOutBack();
 
-		LeanTween.move(m_Enemy.rectTransform, Vector3.zero, RevealAnimationDuration)
-			.setFrom(new Vector3(m_Enemy.rectTransform.rect.width, 0))
+		LeanTween.move(m_EnemyContainer, Vector3.zero, RevealAnimationDuration)
+			.setFrom(new Vector3(m_EnemyContainer.rect.width, 0))
 			.setEaseOutBack();
 
-		LeanTween.move(m_HeartMeter.rectTransform, Vector3.zero, RevealAnimationDuration)
-			.setFrom(new Vector3(0, m_HeartMeter.rectTransform.rect.height))
+		LeanTween.move(m_HeartMeterContainer, Vector3.zero, RevealAnimationDuration)
+			.setFrom(new Vector3(0, m_HeartMeterContainer.rect.height))
 			.setEaseOutBack();
 
 		Battle.OnButtonSmashed += OnButtonSmashed;
@@ -98,15 +104,14 @@ public class BattleUI : MonoBehaviour
 		var changeStanceDuration = Battle.ChangeStanceTime - Time.time;
 		var fadeOutDelay = 0.4f;
 
-		m_Stance.color = Color.white;
 		LeanTween.scale(m_Stance.rectTransform, Vector3.one, 0.1f)
 			.setEaseInBack()
 			.setFrom(Vector3.one * 1.25f);
+		LeanTween.alpha(m_Stance.rectTransform, 1, 0.01f);
 
 		LeanTween.scale(m_Stance.rectTransform, Vector3.one * 0.5f, changeStanceDuration - fadeOutDelay)
 			.setDelay(fadeOutDelay);
 		LeanTween.alpha(m_Stance.rectTransform, 0.5f, changeStanceDuration - fadeOutDelay)
-			.setFrom(1)
 			.setEaseInQuad()
 			.setDelay(fadeOutDelay);
 	}
@@ -123,6 +128,17 @@ public class BattleUI : MonoBehaviour
 			m_Joan.sprite = m_JoanNeutral;
 			m_Enemy.sprite = m_EnemyHappy;
 		}
+
+		JoltImage(m_Joan);
+		JoltImage(m_Enemy);
+	}
+
+	private void JoltImage(Image image)
+	{
+		LeanTween.cancel(image.gameObject);
+		LeanTween.scale(image.rectTransform, Vector3.one, 0.1f)
+			.setEaseInBack()
+			.setFrom(Vector3.one * 1.1f);
 	}
 
 	private void SmashButton(Image button)
