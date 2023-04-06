@@ -12,6 +12,7 @@ public class EnemyController : MonoBehaviour
 	private TileMovement m_TileMovement;
 	private Tilemap m_Tilemap;
 	private Vector2Int m_StartingPosition;
+	private TileMovement m_Player;
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -23,37 +24,50 @@ public class EnemyController : MonoBehaviour
 
 	public void Step()
 	{
-		var player = GameObject.FindGameObjectWithTag("Player").GetComponent<TileMovement>();
+		if (Distance(m_Player.Position, m_TileMovement.Position) <= PursueDistance)
+		{
+			MoveTowards(m_Player.Position);
+		}
+		else
+		{
+			MoveTowards(m_StartingPosition);
+		}
+	}
+
+	private void MoveTowards(Vector2Int position)
+	{
+		if (m_TileMovement.Position == position)
+		{
+			return;
+		}
 
 		var pathFinder = new PathFinder(new TraversableTilemap(m_Tilemap));
-		var path = pathFinder.FindPath(m_TileMovement.Position, player.Position);
+		var path = pathFinder.FindPath(m_TileMovement.Position, position);
 
-		if (path.Length > 0)
+		if (path.Length > 1)
 		{
 			m_TileMovement.Move(path[1]);
 		}
-
-		//var positionDelta = player.Position - m_TileMovement.Position;
-		//var distance = Mathf.Abs(positionDelta.x) + Mathf.Abs(positionDelta.y);
-
-		//if (distance <= PursueDistance && CanSee(player.gameObject))
-		//{
-		//	m_TileMovement.MoveTo(player.Position);
-		//}
 	}
 
-	private bool CanSee(GameObject gameObject)
+	private static int Distance(Vector2Int from, Vector2Int to)
 	{
-		var direction = (gameObject.transform.position - transform.position).normalized;
-		var distance = Vector3.Distance(gameObject.transform.position, transform.position);
-
-		return !Physics.Raycast(transform.position + Vector3.up * 0.5f, direction, distance, LayerMask.GetMask("Wall"));
+		return Mathf.Abs(from.x - to.x) + Mathf.Abs(from.y - to.y);
 	}
+
+	//private bool CanSee(GameObject gameObject)
+	//{
+	//	var direction = (gameObject.transform.position - transform.position).normalized;
+	//	var distance = Vector3.Distance(gameObject.transform.position, transform.position);
+
+	//	return !Physics.Raycast(transform.position + Vector3.up * 0.5f, direction, distance, LayerMask.GetMask("Wall"));
+	//}
 
 	private void Awake()
 	{
 		m_TileMovement = GetComponent<TileMovement>();
 		m_Tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
+		m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<TileMovement>();
 	}
 
 	private void Start()

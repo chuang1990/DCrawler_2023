@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,16 +16,13 @@ public class TraversableTilemap : ITraversableTilemap
 
 	public IEnumerable<Vector2Int> GetNeighbours(Vector2Int position)
 	{
-		return new Vector2Int[]
-		{
-			new Vector2Int(position.x - 1, position.y),
-			new Vector2Int(position.x + 1, position.y),
-			new Vector2Int(position.x, position.y - 1),
-			new Vector2Int(position.x, position.y + 1)
-		}.Where(x =>
-		{
-			var tile = m_Tilemap.GetTile<MapTile>((Vector3Int)x);
-			return tile == null || tile.Walkable;
-		});
+		var directions = (Direction[])Enum.GetValues(typeof(Direction));
+		return directions.Select(x => position + x.ToVector2Int()).Where(IsWalkable);
+	}
+
+	private bool IsWalkable(Vector2Int position)
+	{
+		var tile = m_Tilemap.GetTile<MapTile>((Vector3Int)position);
+		return tile == null || tile.Walkable;
 	}
 }
