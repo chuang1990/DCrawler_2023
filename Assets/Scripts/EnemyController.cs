@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(TileMovement))]
-public class EnemyController : MonoBehaviour, IInteractable
+public class EnemyController : MonoBehaviour
 {
 	public int PursueDistance = 3;
 
@@ -13,9 +13,12 @@ public class EnemyController : MonoBehaviour, IInteractable
 	private Tilemap m_Tilemap;
 	private Vector2Int m_StartingPosition;
 
-	public void Interact(GameObject interactor)
+	private void OnTriggerEnter(Collider other)
 	{
-		interactor.SendMessage("Battle", this);
+		if (other.gameObject.CompareTag("Player"))
+		{
+			other.gameObject.SendMessage("Battle", this);
+		}
 	}
 
 	public void Step()

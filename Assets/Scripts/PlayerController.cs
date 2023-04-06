@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(TileMovement))]
 public class PlayerController : MonoBehaviour
 {
 	public float TurnDuration = 0.25f;
 
+	public IInteractable Interactable => m_Interactable;
+
+	private IInteractable m_Interactable;
 	private Camera m_Camera;
 	private Direction m_Direction;
 	private TileMovement m_TileMovement;
@@ -26,21 +30,21 @@ public class PlayerController : MonoBehaviour
 
 	private void Start()
 	{
-		CancelAnimations();
-
-		m_TileMovement.OnMoved.AddListener(CheckForInteractions);
+		SnapToDirection();
 	}
-	
-	private void CheckForInteractions()
+
+	private void FixedUpdate()
 	{
-		var entities = FindObjectsOfType<TileMovement>();
+		var inFront = GetObjectInFront();
 
-		var interactable = entities.Where(x => x.Position == m_TileMovement.Position)
-			.Select(x => x.GetComponent<IInteractable>())
-			.Where(x => x != null)
-			.FirstOrDefault();
-
-		interactable?.Interact(gameObject);
+		if (inFront != null)
+		{
+			m_Interactable = inFront.GetComponent<IInteractable>();
+		}
+		else
+		{
+			m_Interactable = null;
+		}
 	}
 
 	private void Update()
@@ -64,6 +68,19 @@ public class PlayerController : MonoBehaviour
 		{
 			TurnRight();
 		}
+
+		if (Input.GetMouseButtonDown(0))
+		{
+			Interact();
+		}
+	}
+
+	private void Interact()
+	{
+		if (m_Interactable != null)
+		{
+			m_Interactable.Interact(gameObject);
+		}
 	}
 
 	private void TurnLeft()
@@ -78,7 +95,7 @@ public class PlayerController : MonoBehaviour
 
 	private void Turn(Direction newDirection)
 	{
-		CancelAnimations();
+		SnapToDirection();
 
         m_Direction = newDirection;
 
@@ -95,10 +112,27 @@ public class PlayerController : MonoBehaviour
 		m_TileMovement.Move(m_Direction.Opposite());
 	}
 
-	private void CancelAnimations()
+	private void SnapToDirection()
 	{
 		LeanTween.cancel(m_Camera.gameObject);
 
 		m_Camera.transform.eulerAngles = new Vector3(0, m_Direction.ToRotation(), 0);
+	}
+
+	/// <summary>
+	/// Returns the game object in front of the camera via a physics ray cast
+	/// </summary>
+	/// <returns>Game object in front of camera</returns>
+	private GameObject GetObjectInFront()
+	{
+		var layerMask = LayerMask.GetMask("Default", "Wall");
+		var maxDistance = 2 * m_TileMovement.TileSize;
+
+		if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out var hit, maxDistance, layerMask))
+		{
+			return hit.collider.gameObject;
+		}
+
+		return null;
 	}
 }
