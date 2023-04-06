@@ -11,6 +11,8 @@ public class TileMovement : MonoBehaviour
 	[HideInInspector]
 	public Vector2Int Position;
 
+	public float TileSize => m_Tilemap.cellSize.x;
+
 	private Tilemap m_Tilemap;
 
 	public bool Move(Direction direction)
@@ -20,7 +22,7 @@ public class TileMovement : MonoBehaviour
 	
 	public bool Move(Vector2Int newPosition)
 	{
-		CancelAnimations();
+		SnapToPosition();
 
 		if (!IsTileWalkable(newPosition))
 		{
@@ -54,7 +56,7 @@ public class TileMovement : MonoBehaviour
 		return true;
 	}
 
-	public void CancelAnimations()
+	public void SnapToPosition()
 	{
 		LeanTween.cancel(gameObject);
 
@@ -67,6 +69,6 @@ public class TileMovement : MonoBehaviour
 
 		Position = (Vector2Int)m_Tilemap.WorldToCell(transform.position);
 
-		CancelAnimations();
+		SnapToPosition();
 	}
 }

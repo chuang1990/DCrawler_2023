@@ -5,10 +5,11 @@ using UnityEngine;
 public class EnemyCoordinator : MonoBehaviour
 {
 	public float StepInterval = 1;
+	public float StartDelay = 2;
 
 	private void Start()
 	{
-		InvokeRepeating(nameof(Step), 10, StepInterval);
+		InvokeRepeating(nameof(Step), StartDelay, StepInterval);
 	}
 
 	private void Step()

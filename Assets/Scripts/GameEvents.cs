@@ -8,7 +8,7 @@ public class GameEvents : MonoBehaviour
 	public static GameEvents Instance => s_Instance;
 
     public UnityEvent<EnemyController> OnBattleInitiated;
-	public UnityEvent<EnemyController> OnBattleFinished;
+	public UnityEvent<EnemyController, BattleResult> OnBattleFinished;
 
 	private static GameEvents s_Instance;
 
