@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb1b3bac69596841a946061af451501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PursueDistance: 3
+  PursueDistance: 4
 --- !u!114 &585799096441412443
 MonoBehaviour:
   m_ObjectHideFlags: 0

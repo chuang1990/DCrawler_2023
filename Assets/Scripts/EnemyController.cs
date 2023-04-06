@@ -10,9 +10,9 @@ public class EnemyController : MonoBehaviour
 	public int PursueDistance = 3;
 
 	private TileMovement m_TileMovement;
-	private Tilemap m_Tilemap;
 	private Vector2Int m_StartingPosition;
 	private TileMovement m_Player;
+	private PathFinder m_PathFinder;
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -40,9 +40,8 @@ public class EnemyController : MonoBehaviour
 		{
 			return;
 		}
-
-		var pathFinder = new PathFinder(new TraversableTilemap(m_Tilemap));
-		var path = pathFinder.FindPath(m_TileMovement.Position, position);
+		
+		var path = m_PathFinder.FindPath(m_TileMovement.Position, position);
 
 		if (path.Length > 1)
 		{
@@ -66,8 +65,10 @@ public class EnemyController : MonoBehaviour
 	private void Awake()
 	{
 		m_TileMovement = GetComponent<TileMovement>();
-		m_Tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
 		m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<TileMovement>();
+
+		var tilemap = GameObject.FindGameObjectWithTag("Tilemap").GetComponent<Tilemap>();
+		m_PathFinder = new PathFinder(new TraversableTilemap(tilemap));
 	}
 
 	private void Start()
