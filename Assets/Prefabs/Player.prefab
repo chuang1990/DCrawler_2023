@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5490461191132535777}
   - component: {fileID: 5490461191132535776}
   - component: {fileID: 1697668313022336150}
+  - component: {fileID: 2988681694449427546}
   - component: {fileID: 8595075572510278676}
   - component: {fileID: 5432244544631173200}
   m_Layer: 8
@@ -66,6 +67,25 @@ MonoBehaviour:
       m_Calls: []
   MoveDuration: 0.2
   Position: {x: 0, y: 0}
+--- !u!114 &2988681694449427546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5490461191132535783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c606df050d9704da6dde0a550cb898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnHealed:
+    m_PersistentCalls:
+      m_Calls: []
+  OnDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  MaxHealth: 10
 --- !u!136 &8595075572510278676
 CapsuleCollider:
   m_ObjectHideFlags: 0

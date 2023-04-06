@@ -16,9 +16,9 @@ public class EnemyController : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.CompareTag("Player"))
+		if (other.CompareTag("Player"))
 		{
-			other.gameObject.SendMessage("Battle", this);
+			other.SendMessage("Battle", this);
 		}
 	}
 
