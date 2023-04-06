@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 017ead350df35734297140be3c950b1c
+guid: d983c99ba9db3694eab351914e1a239b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -8,11 +8,11 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: DoorType2
-    second: {fileID: 2100000, guid: 905f215bb2c9ab247992dbfe61e97cd0, type: 2}
+    second: {fileID: 2100000, guid: e1274385d057a8f4eaef159dfc09cdfe, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Spot
+      name: Lavabo_leufonce
     second: {fileID: 2100000, guid: 9b3bf284ee47e8743a7ee46abb368ce1, type: 2}
   materials:
     materialImportMode: 2

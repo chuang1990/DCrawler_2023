@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 017ead350df35734297140be3c950b1c
+guid: 7b702561fd2bf5040ac29c8ab4ae28ce
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DoorType2
-    second: {fileID: 2100000, guid: 905f215bb2c9ab247992dbfe61e97cd0, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Spot
-    second: {fileID: 2100000, guid: 9b3bf284ee47e8743a7ee46abb368ce1, type: 2}
+      name: ExitSign
+    second: {fileID: 2100000, guid: 7122fa0a0e549fd4bbf3e70a890bd110, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

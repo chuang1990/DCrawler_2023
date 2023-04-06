@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 017ead350df35734297140be3c950b1c
+guid: 3955a18f046749a49afce4d05ce83d87
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,13 +7,53 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DoorType2
+      name: BombeBleu
+    second: {fileID: 2100000, guid: 9c828cfd5af86a04e9f210b5daf3feec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BombeJaune
     second: {fileID: 2100000, guid: 905f215bb2c9ab247992dbfe61e97cd0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Spot
+      name: Lavabo_ceramic
+    second: {fileID: 2100000, guid: 95b349a8744a2d94580d0748274dd58d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lavabo_leufonce
     second: {fileID: 2100000, guid: 9b3bf284ee47e8743a7ee46abb368ce1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mirror
+    second: {fileID: 2100000, guid: 46dbc30369abc5c4d9dc810043ae592b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: SideBetweenToilets
+    second: {fileID: 2100000, guid: b5698ffe05cb3854b8c5bd640b4eed1f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sol.001
+    second: {fileID: 2100000, guid: 2b44c9b8e106c9d4f8cb5ff7a0beaa7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Taches
+    second: {fileID: 2100000, guid: 65a1395771ecd3143978c357b0f18ff0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ToiletDoor
+    second: {fileID: 2100000, guid: aba2595221092f540afd300c9e48b3ba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls_bathroom
+    second: {fileID: 2100000, guid: 257360acd48514944bb9d04dbb423427, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

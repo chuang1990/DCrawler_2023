@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 017ead350df35734297140be3c950b1c
+guid: 738ea4da00e030344988365dc1983196
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,12 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DoorType2
-    second: {fileID: 2100000, guid: 905f215bb2c9ab247992dbfe61e97cd0, type: 2}
+      name: Lavabo_ceramic
+    second: {fileID: 2100000, guid: 95b349a8744a2d94580d0748274dd58d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Spot
+      name: Lavabo_leufonce
     second: {fileID: 2100000, guid: 9b3bf284ee47e8743a7ee46abb368ce1, type: 2}
   materials:
     materialImportMode: 2
