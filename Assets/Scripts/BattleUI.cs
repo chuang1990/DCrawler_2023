@@ -1,3 +1,4 @@
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -7,10 +8,10 @@ using UnityEngine.UI;
 
 public class BattleUI : MonoBehaviour
 {
-	public UnityEvent ButtonSmashed;
-	public UnityEvent SideChanged;
-	public UnityEvent StanceChanged;
-	public UnityEvent BattleFinished;
+	public UnityEvent<Button> ButtonSmashed;
+	public UnityEvent<Side> SideChanged;
+	public UnityEvent<Button> StanceChanged;
+	public UnityEvent<BattleResult> BattleFinished;
 	public float RevealAnimationDuration = 0.75f;
 	public float MaxCursorDisplacement = 120;
 	[HideInInspector]
@@ -48,6 +49,9 @@ public class BattleUI : MonoBehaviour
 	private Image m_ControlB;
 	[SerializeField]
 	private Image m_ControlC;
+	[Header("Audio")]
+	[SerializeField]
+	private StudioEventEmitter m_ButtonSmashEventEmitter;
 
 	private void OnEnable()
 	{
@@ -96,7 +100,10 @@ public class BattleUI : MonoBehaviour
 
 	private void OnButtonSmashed(Button button)
 	{
-		ButtonSmashed?.Invoke();
+		ButtonSmashed?.Invoke(button);
+
+		m_ButtonSmashEventEmitter.SetParameter("Instmash", (int)button);
+		m_ButtonSmashEventEmitter.Play();
 
 		SmashButton(GetButtonImage(button));
 
@@ -107,7 +114,7 @@ public class BattleUI : MonoBehaviour
 
 	private void OnStanceChanged()
 	{
-		StanceChanged?.Invoke();
+		StanceChanged?.Invoke(Battle.Stance);
 
 		m_Stance.sprite = GetButtonSprite(Battle.Stance);
 
@@ -128,7 +135,7 @@ public class BattleUI : MonoBehaviour
 
 	private void OnSideChanged()
 	{
-		SideChanged?.Invoke();
+		SideChanged?.Invoke(Battle.Side);
 
 		if (Battle.Side == Side.FullHeart)
 		{
@@ -147,7 +154,7 @@ public class BattleUI : MonoBehaviour
 
 	private void OnBattleFinished(BattleResult result)
 	{
-		BattleFinished?.Invoke();
+		BattleFinished?.Invoke(result);
 	}
 
 	private void JoltImage(Image image)

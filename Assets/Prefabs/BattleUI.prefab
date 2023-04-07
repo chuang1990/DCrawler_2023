@@ -665,23 +665,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ButtonSmashed:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1359506705550793027}
-        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   SideChanged:
     m_PersistentCalls:
       m_Calls: []
   StanceChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  BattleFinished:
     m_PersistentCalls:
       m_Calls: []
   RevealAnimationDuration: 0.75
@@ -701,6 +692,7 @@ MonoBehaviour:
   m_ControlA: {fileID: 2210734239276262684}
   m_ControlB: {fileID: 5287614870630227796}
   m_ControlC: {fileID: 5105891429834878646}
+  m_ButtonSmashEventEmitter: {fileID: 1359506705550793027}
 --- !u!114 &1359506705550793027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -716,11 +708,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1228756580
-      Data2: 1227567387
-      Data3: -1899096677
-      Data4: -1033743008
-    Path: event:/SFX/GuitarMash
+      Data1: 857698695
+      Data2: 1209328298
+      Data3: -1438819154
+      Data4: 50892721
+    Path: event:/SFX/InstMash
   Event: 
   PlayEvent: 0
   StopEvent: 0
