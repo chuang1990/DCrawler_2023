@@ -6,7 +6,7 @@ using UnityEngine;
 public class Battle
 {
 	public Action OnStanceChanged;
-	public Action<Button> OnButtonSmashed;
+	public Action<Button> OnButtonMashed;
 	public Action OnSideChanged;
 	public Action<BattleResult> OnBattleFinished;
 	public EnemyController Enemy;

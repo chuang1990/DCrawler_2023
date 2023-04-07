@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class BattleUI : MonoBehaviour
 {
-	public UnityEvent<Button> ButtonSmashed;
+	public UnityEvent<Button> ButtonMashed;
 	public UnityEvent<Side> SideChanged;
 	public UnityEvent<Button> StanceChanged;
 	public UnityEvent<BattleResult> BattleFinished;
@@ -69,7 +69,7 @@ public class BattleUI : MonoBehaviour
 			.setFrom(new Vector3(0, m_HeartMeterContainer.rect.height))
 			.setEaseOutBack();
 
-		Battle.OnButtonSmashed += OnButtonSmashed;
+		Battle.OnButtonMashed += OnButtonMashed;
 		Battle.OnStanceChanged += OnStanceChanged;
 		Battle.OnSideChanged += OnSideChanged;
 		Battle.OnBattleFinished += OnBattleFinished;
@@ -89,17 +89,17 @@ public class BattleUI : MonoBehaviour
 			return;
 		}
 
-		Battle.OnButtonSmashed -= OnButtonSmashed;
+		Battle.OnButtonMashed -= OnButtonMashed;
 		Battle.OnStanceChanged -= OnStanceChanged;
 		Battle.OnSideChanged -= OnSideChanged;
 		Battle.OnBattleFinished -= OnBattleFinished;
 	}
 
-	private void OnButtonSmashed(Button button)
+	private void OnButtonMashed(Button button)
 	{
-		ButtonSmashed?.Invoke(button);
+		ButtonMashed?.Invoke(button);
 
-		SmashButton(GetButtonImage(button));
+		MashButton(GetButtonImage(button));
 
 		LeanTween.cancel(m_Cursor.gameObject);
 		LeanTween.move(m_Cursor.rectTransform, new Vector3(-Battle.HeartMeter * MaxCursorDisplacement, 0), 0.1f)
@@ -159,7 +159,7 @@ public class BattleUI : MonoBehaviour
 			.setFrom(Vector3.one * 1.1f);
 	}
 
-	private void SmashButton(Image button)
+	private void MashButton(Image button)
 	{
 		LeanTween.cancel(button.gameObject);
 		LeanTween.scale(button.rectTransform, Vector3.one, 0.1f)
