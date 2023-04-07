@@ -144,6 +144,9 @@
 		</relationship>
 	</object>
 	<object class="EventSound" id="{cdb15674-c4f3-4c73-bae4-9f6c61d6490a}">
+		<relationship name="parameters">
+			<destination>{ea5962f8-bbc5-4222-a54f-d8e16496745d}</destination>
+		</relationship>
 		<relationship name="event">
 			<destination>{fd98947e-40f5-4753-8bf7-9c4b65bbdb2d}</destination>
 		</relationship>
@@ -174,6 +177,9 @@
 		<property name="start">
 			<value>1</value>
 		</property>
+		<relationship name="parameters">
+			<destination>{1e4be458-00ae-466c-8e2c-f647d85da402}</destination>
+		</relationship>
 		<relationship name="event">
 			<destination>{059b6cd7-cc8a-4abe-ba99-1e5e1298a554}</destination>
 		</relationship>
@@ -204,6 +210,9 @@
 		<property name="start">
 			<value>2</value>
 		</property>
+		<relationship name="parameters">
+			<destination>{d79d8e7c-0a1b-4f9c-abc7-f3301b877d17}</destination>
+		</relationship>
 		<relationship name="event">
 			<destination>{b6c2a99c-311b-492b-9b15-ce8e605562c2}</destination>
 		</relationship>
@@ -233,6 +242,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{aee29536-1932-48e2-9fba-5e8ac36995f7}" />
 	<object class="MixerBusFader" id="{46664769-6c16-4cb6-9f66-efd67289d8ef}" />
+	<object class="ParameterProperty" id="{ea5962f8-bbc5-4222-a54f-d8e16496745d}">
+		<relationship name="parameter">
+			<destination>{efcecf18-03bc-4b9a-97a0-2d135a9c764c}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{c29642bc-bb89-4631-b7e7-f03c9641c435}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -247,6 +261,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{85770285-3cfe-4e8a-854b-9d6a89810645}" />
+	<object class="ParameterProperty" id="{1e4be458-00ae-466c-8e2c-f647d85da402}">
+		<relationship name="parameter">
+			<destination>{53c6dd7a-937a-4dc5-bbda-3932ad192c4d}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{84480897-73d7-48c0-bb74-cfbb57ba3863}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
@@ -261,6 +280,11 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{aa921f30-16bd-45c7-88f0-bfe81c6103aa}" />
+	<object class="ParameterProperty" id="{d79d8e7c-0a1b-4f9c-abc7-f3301b877d17}">
+		<relationship name="parameter">
+			<destination>{1b24a01b-7026-42d7-9555-bae6d6aa3394}</destination>
+		</relationship>
+	</object>
 	<object class="Automator" id="{aa774496-a5a1-4adc-b3d7-687726768764}">
 		<property name="nameOfPropertyBeingAutomated">
 			<value>volume</value>
