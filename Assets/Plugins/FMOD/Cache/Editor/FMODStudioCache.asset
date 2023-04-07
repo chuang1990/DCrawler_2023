@@ -538,7 +538,7 @@ MonoBehaviour:
   - {fileID: 2191626475433791751}
   StringsBanks:
   - {fileID: 2523164107246164956}
-  cacheTime: 638164526534327713
+  cacheTime: 638164925155384097
   cacheVersion: 131603
 --- !u!114 &278927069931703524
 MonoBehaviour:
@@ -665,7 +665,7 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638164526534327713
+  lastModified: 638164925150194585
   FileSizes:
   - Name: Desktop
     Value: 25837696
@@ -685,7 +685,7 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638164498787456544
+  lastModified: 638164925155384097
   FileSizes:
   - Name: Desktop
     Value: 2408
