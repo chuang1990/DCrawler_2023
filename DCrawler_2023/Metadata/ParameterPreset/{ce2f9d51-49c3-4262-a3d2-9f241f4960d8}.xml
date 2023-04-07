@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ce2f9d51-49c3-4262-a3d2-9f241f4960d8}">
+		<property name="name">
+			<value>Enemyloops</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5e0c0cd9-8300-4d13-b89c-1ba59e214fa0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ddaf6b4e-38c1-4199-a4d9-c8e94f9a54f8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ddaf6b4e-38c1-4199-a4d9-c8e94f9a54f8}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Drumloop</value>
+			<value>Pianoloop</value>
+			<value>Guitarloop</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeedAsymmetric">
+			<value>true</value>
+		</property>
+	</object>
+</objects>
