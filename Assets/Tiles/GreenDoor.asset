@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bf01920d2d1524b8540dd0508300cc, type: 3}
   m_Name: GreenDoor
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 2320115245599322240, guid: 28207c6c21b990c4999f6fbe2843e3fc, type: 3}
-  Walkable: 1
+  Prefab: {fileID: 2690024842141428743, guid: fb6ee253b3e78a646b7df3451ecd21c5, type: 3}
+  Walkable: 0
