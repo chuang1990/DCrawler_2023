@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ca997ecb-0050-4573-bc7c-51ac2de97657}">
+		<property name="name">
+			<value>enterdungeon</value>
+		</property>
+		<relationship name="folder">
+			<destination>{5e0c0cd9-8300-4d13-b89c-1ba59e214fa0}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3801557f-d676-4b03-b74f-8e968a8327b0}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3801557f-d676-4b03-b74f-8e968a8327b0}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
