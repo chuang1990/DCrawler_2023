@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ac2b288054a73ed4e9972b8094c7e92d, type: 2}
+    - target: {fileID: 2026925116750653120, guid: 28207c6c21b990c4999f6fbe2843e3fc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d3f027119b9155542b95a1d00ecef6bd, type: 2}
     - target: {fileID: 2320115245599322240, guid: 28207c6c21b990c4999f6fbe2843e3fc, type: 3}
       propertyPath: m_Name
       value: GreenDoor
