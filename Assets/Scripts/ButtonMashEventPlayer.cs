@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonSmashEventPlayer : MonoBehaviour
+public class ButtonMashEventPlayer : MonoBehaviour
 {
     [SerializeField]
     private StudioEventEmitter m_ButtonSmashEventEmitter;

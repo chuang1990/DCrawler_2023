@@ -7,7 +7,7 @@ public class BattleController : MonoBehaviour
 	public float MinStanceDuration = 2;
 	public float MaxStanceDuration = 5;
 	public float ChangeSideHealthPenalty = 2;
-	public float SmashHeartMeterIncrement = 0.05f;
+	public float MashHeartMeterIncrement = 0.01f;
 
 	[SerializeField]
 	private BattleUI m_BattleUI;
@@ -53,17 +53,17 @@ public class BattleController : MonoBehaviour
 
 		if (Input.GetKeyDown(KeyCode.A))
 		{
-			SmashButton(Button.A);
+			MashButton(Button.A);
 		}
 
 		if (Input.GetKeyDown(KeyCode.B))
 		{
-			SmashButton(Button.B);
+			MashButton(Button.B);
 		}
 
 		if (Input.GetKeyDown(KeyCode.C))
 		{
-			SmashButton(Button.C);
+			MashButton(Button.C);
 		}
 	}
 
@@ -84,18 +84,18 @@ public class BattleController : MonoBehaviour
 		m_Battle.OnSideChanged();
 	}
 
-	private void SmashButton(Button button)
+	private void MashButton(Button button)
 	{
-		m_Battle.OnButtonSmashed(button);
+		m_Battle.OnButtonMashed(button);
 
 		if (button == m_Battle.Stance)
 		{
-			m_Battle.HeartMeter += SmashHeartMeterIncrement;
+			m_Battle.HeartMeter += MashHeartMeterIncrement;
 			ChangeSide(Side.FullHeart);
 		}
 		else
 		{
-			m_Battle.HeartMeter -= SmashHeartMeterIncrement;
+			m_Battle.HeartMeter -= MashHeartMeterIncrement;
 			ChangeSide(Side.BrokenHeart);
 		}
 
