@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{b2de8da5-3dcf-4540-8c3f-d9fddc0b95ac}">
+		<property name="name">
+			<value>Delay</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{99ebe5a1-2e03-4f0c-a758-ec409d2c33e4}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{fa6ebee5-5e5d-4784-ac1a-321b25a680e2}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{179e598e-f58b-4a3a-a1b5-1fa9ad3cf671}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{99ebe5a1-2e03-4f0c-a758-ec409d2c33e4}">
+		<relationship name="effects">
+			<destination>{7c6f8e28-93fa-43e3-a7da-cc1b3a6342d6}</destination>
+			<destination>{8ab0d36b-f504-4637-8cce-21f942d90366}</destination>
+			<destination>{b68dfcd1-73cf-4699-b482-18f83c9f2190}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{fa6ebee5-5e5d-4784-ac1a-321b25a680e2}" />
+	<object class="DelayEffect" id="{7c6f8e28-93fa-43e3-a7da-cc1b3a6342d6}" />
+	<object class="FlangerEffect" id="{8ab0d36b-f504-4637-8cce-21f942d90366}" />
+	<object class="MixerBusFader" id="{b68dfcd1-73cf-4699-b482-18f83c9f2190}" />
+</objects>

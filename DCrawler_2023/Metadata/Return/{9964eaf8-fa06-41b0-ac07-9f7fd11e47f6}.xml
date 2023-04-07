@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerReturn" id="{9964eaf8-fa06-41b0-ac07-9f7fd11e47f6}">
+		<property name="volume">
+			<value>-80</value>
+		</property>
+		<property name="name">
+			<value>HearingDamage</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{d5e4b9f2-319d-4875-a98b-3bcb409361e8}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{b82a9184-99a7-41b7-b004-71cb02d991e5}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{179e598e-f58b-4a3a-a1b5-1fa9ad3cf671}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{d5e4b9f2-319d-4875-a98b-3bcb409361e8}">
+		<relationship name="effects">
+			<destination>{9db8c49c-1ea3-4984-918b-38a4962c0d4e}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{b82a9184-99a7-41b7-b004-71cb02d991e5}" />
+	<object class="MixerBusFader" id="{9db8c49c-1ea3-4984-918b-38a4962c0d4e}" />
+</objects>

@@ -58,7 +58,7 @@
 			<destination>{24631497-3789-4e62-944e-b478dfcdf125}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{179e598e-f58b-4a3a-a1b5-1fa9ad3cf671}</destination>
+			<destination>{3fcaaeda-7979-4e75-918b-5d27f759c4be}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{0d3d499b-4bae-4d9b-b197-5fd5c3e99f29}" />
@@ -377,6 +377,7 @@
 		<relationship name="automationPoints">
 			<destination>{e66a4372-7e59-4cda-8b9e-1440084526f6}</destination>
 			<destination>{70efdfab-cda6-4371-a178-463aee57a3ea}</destination>
+			<destination>{9fc58002-c05d-43b3-a3c5-e24b8547b376}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{101ad92d-15f7-458b-8733-a34050b218aa}" />
@@ -439,6 +440,14 @@
 	<object class="AutomationPoint" id="{70efdfab-cda6-4371-a178-463aee57a3ea}">
 		<property name="position">
 			<value>1</value>
+		</property>
+		<property name="value">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{9fc58002-c05d-43b3-a3c5-e24b8547b376}">
+		<property name="position">
+			<value>0</value>
 		</property>
 		<property name="value">
 			<value>-80</value>

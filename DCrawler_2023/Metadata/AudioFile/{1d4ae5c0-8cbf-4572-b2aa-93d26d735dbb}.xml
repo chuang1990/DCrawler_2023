@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1d4ae5c0-8cbf-4572-b2aa-93d26d735dbb}">
+		<property name="assetPath">
+			<value>flick2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.49659863945578231</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4d861740-bc02-4761-8eff-320a69b3405d}</destination>
+		</relationship>
+	</object>
+</objects>
