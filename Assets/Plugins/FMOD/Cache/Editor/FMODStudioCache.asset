@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9152629690918827671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VOX/Playerdrunk
-  m_EditorClassIdentifier: 
-  Path: event:/VOX/Playerdrunk
-  Guid:
-    Data1: 426686341
-    Data2: 1196294245
-    Data3: -1962314839
-    Data4: 494285838
-  Banks:
-  - {fileID: 2191626475433791751}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-9083787323972741110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -327,6 +300,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2275674628910637140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UIHover
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UIHover
+  Guid:
+    Data1: 93796127
+    Data2: 1136931302
+    Data3: -711112566
+    Data4: 169030491
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1791994110938742985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,24 +518,26 @@ MonoBehaviour:
   - {fileID: -9083787323972741110}
   - {fileID: 3522372308643885322}
   - {fileID: 8437416475014977856}
-  - {fileID: -9152629690918827671}
   - {fileID: -412021409901880495}
   - {fileID: -8661439769842289680}
-  - {fileID: 1113001316929459409}
   - {fileID: -2924180151645285081}
   - {fileID: -8317661329630483883}
-  - {fileID: 4176855501603812772}
   - {fileID: 4786583866934672651}
   - {fileID: -226937533257102518}
   - {fileID: 787833031374695189}
   - {fileID: -2870617237262034172}
   - {fileID: 1401105003979464585}
+  - {fileID: -2275674628910637140}
+  - {fileID: 6910309622015111656}
+  - {fileID: 4058016093846491455}
+  - {fileID: 4451423604207002627}
+  - {fileID: 6361763121377429835}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2191626475433791751}
   StringsBanks:
   - {fileID: 2523164107246164956}
-  cacheTime: 638164796454419175
+  cacheTime: 638164916166795118
   cacheVersion: 131603
 --- !u!114 &278927069931703524
 MonoBehaviour:
@@ -592,33 +594,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
---- !u!114 &1113001316929459409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VOX/Playerswear
-  m_EditorClassIdentifier: 
-  Path: event:/VOX/Playerswear
-  Guid:
-    Data1: 997195950
-    Data2: 1128053004
-    Data3: 1341722517
-    Data4: -599432043
-  Banks:
-  - {fileID: 2191626475433791751}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &1401105003979464585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,10 +664,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638164796454365390
+  lastModified: 638164916166645536
   FileSizes:
   - Name: Desktop
-    Value: 25153344
+    Value: 25836448
   Exists: 1
 --- !u!114 &2523164107246164956
 MonoBehaviour:
@@ -709,10 +684,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638164796454419175
+  lastModified: 638164916166795118
   FileSizes:
   - Name: Desktop
-    Value: 1954
+    Value: 2354
   Exists: 1
 --- !u!114 &3356299520093929293
 MonoBehaviour:
@@ -797,8 +772,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4351
---- !u!114 &4176855501603812772
+  Length: 4903
+--- !u!114 &4058016093846491455
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -808,14 +783,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/VOX/Playersigh
+  m_Name: snapshot:/New Group/hearingloss
   m_EditorClassIdentifier: 
-  Path: event:/VOX/Playersigh
+  Path: snapshot:/New Group/hearingloss
   Guid:
-    Data1: -1952619066
-    Data2: 1121347007
-    Data3: -2131077192
-    Data4: 685097203
+    Data1: -1478037393
+    Data2: 1324581235
+    Data3: 792903316
+    Data4: -611285040
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4451423604207002627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UIClick
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UIClick
+  Guid:
+    Data1: -1721932940
+    Data2: 1309382708
+    Data3: 1357909431
+    Data4: 119466737
   Banks:
   - {fileID: 2191626475433791751}
   IsStream: 0
@@ -852,6 +854,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 88726
+--- !u!114 &6361763121377429835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playernoises
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playernoises
+  Guid:
+    Data1: 426686341
+    Data2: 1196294245
+    Data3: -1962314839
+    Data4: 494285838
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6780285171606448770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -876,6 +905,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6910309622015111656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hearing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hearing
+  Guid:
+    Data1: -176335561
+    Data2: 1140214359
+    Data3: -575171928
+    Data4: -1497473319
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &7344875831045620103
 MonoBehaviour:
   m_ObjectHideFlags: 0
