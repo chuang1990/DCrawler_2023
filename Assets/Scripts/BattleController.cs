@@ -56,12 +56,12 @@ public class BattleController : MonoBehaviour
 			MashButton(Button.A);
 		}
 
-		if (Input.GetKeyDown(KeyCode.B))
+		if (Input.GetKeyDown(KeyCode.S))
 		{
 			MashButton(Button.B);
 		}
 
-		if (Input.GetKeyDown(KeyCode.C))
+		if (Input.GetKeyDown(KeyCode.D))
 		{
 			MashButton(Button.C);
 		}
