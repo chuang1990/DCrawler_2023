@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8341658586578072418}
   - component: {fileID: 8341658586578072421}
   - component: {fileID: 8341658586578072419}
+  - component: {fileID: 6352133744953652854}
   m_Layer: 0
   m_Name: HealthPickup
   m_TagString: Enemy
@@ -178,14 +179,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d311a1a5778ba1a4091148bf2ef9c92b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OnConsumed:
+  Consumed:
     m_PersistentCalls:
-      m_Calls: []
-  pillpickup:
+      m_Calls:
+      - m_Target: {fileID: 6352133744953652854}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  HealAmount: 1
+--- !u!114 &6352133744953652854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8341658586578072417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
     Guid:
       Data1: -114971567
       Data2: 1142418495
       Data3: 1694727054
       Data4: 775186060
     Path: event:/SFX/PillPickup
-  HealAmount: 1
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

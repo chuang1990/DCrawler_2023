@@ -6,15 +6,14 @@ using FMODUnity;
 
 public class HealthPickup : MonoBehaviour
 {
-	public UnityEvent OnConsumed;
-	public EventReference pillpickup;
+	public UnityEvent Consumed;
 
 	public int HealAmount = 1;
 
 	private void OnTriggerEnter(Collider other)
 	{
 		var health = other.GetComponent<Health>();
-        RuntimeManager.PlayOneShot(pillpickup);
+
         if (health == null)
 		{
 			return;
@@ -24,7 +23,7 @@ public class HealthPickup : MonoBehaviour
 		{
 			Destroy(gameObject);
 
-			OnConsumed?.Invoke();
+			Consumed?.Invoke();
 		}
 	}
 }
