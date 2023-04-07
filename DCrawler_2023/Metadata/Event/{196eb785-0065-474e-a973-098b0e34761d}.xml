@@ -72,6 +72,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f4c7651b-4e91-4613-a6b3-56b3581ec33e}">
+		<property name="volume">
+			<value>-9.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{04e3c4eb-813d-4b8b-a7ae-955315384603}</destination>
 		</relationship>
@@ -96,7 +99,7 @@
 	<object class="MixerBusEffectChain" id="{04e3c4eb-813d-4b8b-a7ae-955315384603}">
 		<relationship name="effects">
 			<destination>{15f7adc6-4c22-4be7-a0f9-0576ad991945}</destination>
-			<destination>{b837a406-d615-4189-ba65-6805c1821c96}</destination>
+			<destination>{e0f605d9-e6a3-4c81-93f1-851b2f695d04}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b842b7c2-163f-4387-b303-fe106fa6ab63}" />
@@ -119,10 +122,16 @@
 	</object>
 	<object class="MixerBusFader" id="{2cc85864-0e1d-4035-86ad-93e03453a33d}" />
 	<object class="MixerBusFader" id="{15f7adc6-4c22-4be7-a0f9-0576ad991945}" />
-	<object class="SFXReverbEffect" id="{b837a406-d615-4189-ba65-6805c1821c96}">
-		<property name="decayTime">
-			<value>1200</value>
+	<object class="MixerSend" id="{e0f605d9-e6a3-4c81-93f1-851b2f695d04}">
+		<property name="level">
+			<value>-18.5</value>
 		</property>
+		<property name="inputFormat">
+			<value>1</value>
+		</property>
+		<relationship name="mixerReturn">
+			<destination>{67de22a2-b588-40d9-9a18-c4960e828f59}</destination>
+		</relationship>
 	</object>
 	<object class="SingleSound" id="{5582343b-6326-4c5e-85c0-11d566edcc7a}">
 		<relationship name="audioFile">
