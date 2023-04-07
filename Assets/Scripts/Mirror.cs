@@ -40,5 +40,12 @@ public class Mirror : MonoBehaviour, IInteractable
             //    Destroy(door.gameObject);
             //}
         }
+
+        var mirrorCutscene = FindObjectOfType<MirrorCutscene>();
+
+        if (mirrorCutscene != null)
+        {
+			mirrorCutscene.Play();
+		}
 	}
 }
