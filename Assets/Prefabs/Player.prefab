@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 4443005062690718199}
   - component: {fileID: 1810483310136721381}
   m_Layer: 8
-  m_Name: Vocals
+  m_Name: VocalSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
