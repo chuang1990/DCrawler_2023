@@ -10,10 +10,10 @@ public class EnemyStanceEventPlayer : MonoBehaviour
 
 	public void Play(Button button)
 	{
-		m_EnemyStanceEventEmitter.EventInstance.setParameterByNameWithLabel("Enemyloops", GetInstmashLabel(button));
+		m_EnemyStanceEventEmitter.EventInstance.setParameterByNameWithLabel("Enemyloops", GetEnemyLoopsLabel(button));
 	}
 
-	private string GetInstmashLabel(Button button)
+	private string GetEnemyLoopsLabel(Button button)
 	{
 		return button switch
 		{
