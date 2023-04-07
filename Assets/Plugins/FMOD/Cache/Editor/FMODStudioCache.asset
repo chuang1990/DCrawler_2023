@@ -159,7 +159,8 @@ MonoBehaviour:
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 8300025560209916981}
   MinDistance: 1
   MaxDistance: 20
   Length: 79060
@@ -537,7 +538,7 @@ MonoBehaviour:
   - {fileID: 2191626475433791751}
   StringsBanks:
   - {fileID: 2523164107246164956}
-  cacheTime: 638164871034544218
+  cacheTime: 638165016725345145
   cacheVersion: 131603
 --- !u!114 &278927069931703524
 MonoBehaviour:
@@ -664,10 +665,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638164871034509783
+  lastModified: 638165016725292971
   FileSizes:
   - Name: Desktop
-    Value: 25836448
+    Value: 25837696
   Exists: 1
 --- !u!114 &2523164107246164956
 MonoBehaviour:
@@ -684,10 +685,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638164871034544218
+  lastModified: 638165016725345145
   FileSizes:
   - Name: Desktop
-    Value: 2354
+    Value: 2408
   Exists: 1
 --- !u!114 &3356299520093929293
 MonoBehaviour:
@@ -985,6 +986,30 @@ MonoBehaviour:
   - Drumloop
   - Pianoloop
   - Guitarloop
+  Exists: 1
+--- !u!114 &8300025560209916981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dungeon/enterdungeon
+  m_EditorClassIdentifier: 
+  Name: enterdungeon
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4213787538
+    data2: 2733847044
+  Type: 0
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &8437416475014977856
 MonoBehaviour:
