@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 
 public class TileMovement : MonoBehaviour
 {
-	public UnityEvent OnMoved;
+	public UnityEvent Moved;
 	public float MoveDuration = 0.2f;
 	[HideInInspector]
 	public Vector2Int Position;
@@ -34,7 +34,7 @@ public class TileMovement : MonoBehaviour
 		var worldPosition = m_Tilemap.GetCellCenterWorld((Vector3Int)Position);
 		LeanTween.move(gameObject, worldPosition, MoveDuration).setEaseOutExpo();
 
-		OnMoved?.Invoke();
+		Moved?.Invoke();
 
 		return true;
 	}
