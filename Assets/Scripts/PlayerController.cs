@@ -30,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
 	private void Start()
 	{
+		m_Direction = (Direction)(Mathf.FloorToInt(transform.eulerAngles.y / 90) % 4);
+
 		SnapToDirection();
 	}
 
