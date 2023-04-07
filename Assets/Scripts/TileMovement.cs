@@ -41,10 +41,10 @@ public class TileMovement : MonoBehaviour
 
 	public bool IsTileWalkable(Vector2Int position)
 	{
-		if (!m_Tilemap.cellBounds.Contains((Vector3Int)position))
-		{
-			return false;
-		}
+		//if (!m_Tilemap.cellBounds.Contains((Vector3Int)position))
+		//{
+		//	return false;
+		//}
 
 		var tile = m_Tilemap.GetTile<MapTile>((Vector3Int)position);
 
