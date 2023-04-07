@@ -49,9 +49,6 @@ public class BattleUI : MonoBehaviour
 	private Image m_ControlB;
 	[SerializeField]
 	private Image m_ControlC;
-	[Header("Audio")]
-	[SerializeField]
-	private StudioEventEmitter m_ButtonSmashEventEmitter;
 
 	private void OnEnable()
 	{
@@ -101,9 +98,6 @@ public class BattleUI : MonoBehaviour
 	private void OnButtonSmashed(Button button)
 	{
 		ButtonSmashed?.Invoke(button);
-
-		m_ButtonSmashEventEmitter.SetParameter("Instmash", (int)button);
-		m_ButtonSmashEventEmitter.Play();
 
 		SmashButton(GetButtonImage(button));
 
