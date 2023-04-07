@@ -6,12 +6,12 @@ using UnityEngine;
 public class ButtonMashEventPlayer : MonoBehaviour
 {
     [SerializeField]
-    private StudioEventEmitter m_ButtonSmashEventEmitter;
+    private StudioEventEmitter m_ButtonMashEventEmitter;
 
     public void Play(Button button)
     {
-		m_ButtonSmashEventEmitter.EventInstance.setParameterByNameWithLabel("Instmash", GetInstmashLabel(button));
-		m_ButtonSmashEventEmitter.Play();
+		m_ButtonMashEventEmitter.EventInstance.setParameterByNameWithLabel("Instmash", GetInstmashLabel(button));
+		m_ButtonMashEventEmitter.Play();
 	}
 
 	private string GetInstmashLabel(Button button)
