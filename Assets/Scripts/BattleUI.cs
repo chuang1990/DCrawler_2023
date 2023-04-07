@@ -7,6 +7,10 @@ using UnityEngine.UI;
 
 public class BattleUI : MonoBehaviour
 {
+	public UnityEvent ButtonSmashed;
+	public UnityEvent SideChanged;
+	public UnityEvent StanceChanged;
+	public UnityEvent BattleFinished;
 	public float RevealAnimationDuration = 0.75f;
 	public float MaxCursorDisplacement = 120;
 	[HideInInspector]
@@ -67,6 +71,7 @@ public class BattleUI : MonoBehaviour
 		Battle.OnButtonSmashed += OnButtonSmashed;
 		Battle.OnStanceChanged += OnStanceChanged;
 		Battle.OnSideChanged += OnSideChanged;
+		Battle.OnBattleFinished += OnBattleFinished;
 
 		m_Cursor.rectTransform.anchoredPosition = Vector2.zero;
 
@@ -86,10 +91,13 @@ public class BattleUI : MonoBehaviour
 		Battle.OnButtonSmashed -= OnButtonSmashed;
 		Battle.OnStanceChanged -= OnStanceChanged;
 		Battle.OnSideChanged -= OnSideChanged;
+		Battle.OnBattleFinished -= OnBattleFinished;
 	}
 
 	private void OnButtonSmashed(Button button)
 	{
+		ButtonSmashed?.Invoke();
+
 		SmashButton(GetButtonImage(button));
 
 		LeanTween.cancel(m_Cursor.gameObject);
@@ -99,6 +107,8 @@ public class BattleUI : MonoBehaviour
 
 	private void OnStanceChanged()
 	{
+		StanceChanged?.Invoke();
+
 		m_Stance.sprite = GetButtonSprite(Battle.Stance);
 
 		var changeStanceDuration = Battle.ChangeStanceTime - Time.time;
@@ -118,6 +128,8 @@ public class BattleUI : MonoBehaviour
 
 	private void OnSideChanged()
 	{
+		SideChanged?.Invoke();
+
 		if (Battle.Side == Side.FullHeart)
 		{
 			m_Joan.sprite = m_JoanPlay;
@@ -131,6 +143,11 @@ public class BattleUI : MonoBehaviour
 
 		JoltImage(m_Joan);
 		JoltImage(m_Enemy);
+	}
+
+	private void OnBattleFinished(BattleResult result)
+	{
+		BattleFinished?.Invoke();
 	}
 
 	private void JoltImage(Image image)

@@ -30,6 +30,8 @@ public class BattleController : MonoBehaviour
 	{
 		Debug.Log($"Battle finished! Result was {result}");
 
+		m_Battle.OnBattleFinished(result);
+
 		Destroy(m_Battle.Enemy.gameObject);
 
 		GameEvents.Instance.OnBattleFinished?.Invoke(m_Battle.Enemy, result);

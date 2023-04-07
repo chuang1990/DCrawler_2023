@@ -8,7 +8,7 @@ public class Battle
 	public Action OnStanceChanged;
 	public Action<Button> OnButtonSmashed;
 	public Action OnSideChanged;
-
+	public Action<BattleResult> OnBattleFinished;
 	public EnemyController Enemy;
 	public Button Stance;
 	public Side Side;
