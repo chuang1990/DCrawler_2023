@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class FirstPersonController : MonoBehaviour
 
     private Vector3Int currentTile;
     private bool isMoving;
+    public EventReference footsteps;
+    
 
     void Start()
     {

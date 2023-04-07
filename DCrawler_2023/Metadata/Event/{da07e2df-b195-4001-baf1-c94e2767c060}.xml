@@ -5,7 +5,7 @@
 			<value>Red</value>
 		</property>
 		<property name="name">
-			<value>EnemyGague</value>
+			<value>BattleGague</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>
@@ -55,11 +55,7 @@
 	</object>
 	<object class="EventAutomatableProperties" id="{0ab1ba68-6795-4ba4-afec-90e22ea32143}" />
 	<object class="MarkerTrack" id="{9f859326-95eb-4e24-ae73-763b9c452384}" />
-	<object class="Timeline" id="{e3ffaae3-6316-4f75-a2f2-727d847aa45c}">
-		<property name="isProxyEnabled">
-			<value>false</value>
-		</property>
-	</object>
+	<object class="Timeline" id="{e3ffaae3-6316-4f75-a2f2-727d847aa45c}" />
 	<object class="EventMixerMaster" id="{167b5e72-bc90-4388-90fd-c143e154455f}">
 		<relationship name="effectChain">
 			<destination>{e014246c-2a62-447a-9ef7-20f8e86ad06a}</destination>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{d33b5c35-72f5-41f1-8889-8c87b7cf882c}">
+		<property name="assetPath">
+			<value>Vox/playerattack2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.7634013605442177</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4d861740-bc02-4761-8eff-320a69b3405d}</destination>
+		</relationship>
+	</object>
+</objects>

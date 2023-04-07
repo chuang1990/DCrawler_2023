@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9152629690918827671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playerdrunk
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playerdrunk
+  Guid:
+    Data1: 426686341
+    Data2: 1196294245
+    Data3: -1962314839
+    Data4: 494285838
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-9083787323972741110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,6 +72,60 @@ MonoBehaviour:
     Data2: 1128111829
     Data3: 601840036
     Data4: 170379620
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8661439769842289680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/PlayerAttack
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/PlayerAttack
+  Guid:
+    Data1: 684127656
+    Data2: 1089835887
+    Data3: -787782776
+    Data4: 478172322
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-8317661329630483883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/PlayerMad
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/PlayerMad
+  Guid:
+    Data1: 2089692102
+    Data2: 1111427855
+    Data3: -1132898656
+    Data4: -36631444
   Banks:
   - {fileID: 2191626475433791751}
   IsStream: 0
@@ -104,11 +185,11 @@ MonoBehaviour:
   - {fileID: 2191626475433791751}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 24163
 --- !u!114 &-5253559130717115287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,11 +239,11 @@ MonoBehaviour:
   - {fileID: 2191626475433791751}
   IsStream: 1
   Is3D: 0
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 18000
 --- !u!114 &-3452322556209188865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +264,7 @@ MonoBehaviour:
     Data4: -85456543
   Banks:
   - {fileID: 2191626475433791751}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters: []
@@ -244,6 +325,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 123793
+--- !u!114 &-2924180151645285081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/PlayerMirror
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/PlayerMirror
+  Guid:
+    Data1: 223389627
+    Data2: 1090915173
+    Data3: -348391802
+    Data4: -1693579014
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2193892652178768885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -270,7 +378,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 8000
 --- !u!114 &-1791994110938742985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +433,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-412021409901880495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playerwin
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playerwin
+  Guid:
+    Data1: -2051101023
+    Data2: 1304801532
+    Data3: 1394742942
+    Data4: -1683897432
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -347,7 +482,6 @@ MonoBehaviour:
   - {fileID: -600740485445105109}
   - {fileID: -5253559130717115287}
   - {fileID: -5412729976017463746}
-  - {fileID: 5675288984078897974}
   - {fileID: -8803052932759885443}
   - {fileID: -4652776397048640460}
   - {fileID: -3212313080549975817}
@@ -356,12 +490,22 @@ MonoBehaviour:
   - {fileID: -1791994110938742985}
   - {fileID: 3383714782420191204}
   - {fileID: -9083787323972741110}
+  - {fileID: 3522372308643885322}
+  - {fileID: 8437416475014977856}
+  - {fileID: -9152629690918827671}
+  - {fileID: -412021409901880495}
+  - {fileID: -8661439769842289680}
+  - {fileID: 1113001316929459409}
+  - {fileID: -2924180151645285081}
+  - {fileID: -8317661329630483883}
+  - {fileID: 4176855501603812772}
+  - {fileID: 4786583866934672651}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2191626475433791751}
   StringsBanks:
   - {fileID: 2523164107246164956}
-  cacheTime: 638163336665842134
+  cacheTime: 638164598114485091
   cacheVersion: 131603
 --- !u!114 &278927069931703524
 MonoBehaviour:
@@ -390,6 +534,33 @@ MonoBehaviour:
   - Piano
   - Guitar
   Exists: 1
+--- !u!114 &1113001316929459409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playerswear
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playerswear
+  Guid:
+    Data1: 997195950
+    Data2: 1128053004
+    Data3: 1341722517
+    Data4: -599432043
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2191626475433791751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,10 +576,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638163336665842134
+  lastModified: 638164598114433501
   FileSizes:
   - Name: Desktop
-    Value: 21556768
+    Value: 23642528
   Exists: 1
 --- !u!114 &2523164107246164956
 MonoBehaviour:
@@ -425,10 +596,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638162324945181065
+  lastModified: 638164598114485091
   FileSizes:
   - Name: Desktop
-    Value: 1506
+    Value: 1934
   Exists: 1
 --- !u!114 &3356299520093929293
 MonoBehaviour:
@@ -486,6 +657,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3750
+--- !u!114 &3522372308643885322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PillPickup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/PillPickup
+  Guid:
+    Data1: -114971567
+    Data2: 1142418495
+    Data3: 1694727054
+    Data4: 775186060
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4351
+--- !u!114 &4176855501603812772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playersigh
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playersigh
+  Guid:
+    Data1: -1952619066
+    Data2: 1121347007
+    Data3: -2131077192
+    Data4: 685097203
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4786583866934672651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menu
+  Guid:
+    Data1: 225624782
+    Data2: 1321891299
+    Data3: -930719326
+    Data4: -21228668
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 90093
 --- !u!114 &4800581154929136755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -510,33 +762,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &5675288984078897974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Zippo
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Zippo
-  Guid:
-    Data1: -114971567
-    Data2: 1142418495
-    Data3: 1694727054
-    Data4: 775186060
-  Banks:
-  - {fileID: 2191626475433791751}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &6780285171606448770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,3 +786,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8437416475014977856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playerhurt
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playerhurt
+  Guid:
+    Data1: -806151319
+    Data2: 1193546111
+    Data3: 632768416
+    Data4: 1035286102
+  Banks:
+  - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0

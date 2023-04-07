@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a00b8712-7402-4f39-8d17-ec632f0cef6c}">
+		<property name="assetPath">
+			<value>Vox/playermirror3.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.476077097505669</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{4d861740-bc02-4761-8eff-320a69b3405d}</destination>
+		</relationship>
+	</object>
+</objects>
