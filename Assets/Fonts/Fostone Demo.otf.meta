@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: a9c957728f9830947a9b524b4c67a8e6
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Fostone Demo
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 786ffff9b56f767479f4b14b8f8746a1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
