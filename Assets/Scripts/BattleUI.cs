@@ -131,14 +131,14 @@ public class BattleUI : MonoBehaviour
 	{
 		SideChanged?.Invoke(Battle.Side);
 
-		if (Battle.Side == Side.FullHeart)
-		{
-			m_Joan.sprite = m_JoanPlay;
-			m_Enemy.sprite = m_EnemySad;
-		}
-		else if (Battle.Side == Side.BrokenHeart)
+		if (Battle.Side == Side.BrokenHeart)
 		{
 			m_Joan.sprite = m_JoanNeutral;
+			m_Enemy.sprite = m_EnemySad;
+		}
+		else if (Battle.Side == Side.FullHeart)
+		{
+			m_Joan.sprite = m_JoanPlay;
 			m_Enemy.sprite = m_EnemyHappy;
 		}
 

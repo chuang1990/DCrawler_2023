@@ -93,10 +93,14 @@ public class BattleController : MonoBehaviour
 			m_Battle.HeartMeter += MashHeartMeterIncrement;
 			ChangeSide(Side.FullHeart);
 		}
-		else
+		else if (button != m_Battle.Stance)
 		{
 			m_Battle.HeartMeter -= MashHeartMeterIncrement;
 			ChangeSide(Side.BrokenHeart);
+		}
+		else 
+		{
+			ChangeSide(Side.Neutral);
 		}
 
 		if (m_Battle.HeartMeter < -1)
