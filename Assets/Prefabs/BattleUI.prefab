@@ -980,6 +980,9 @@ MonoBehaviour:
   MaxCursorDisplacement: 120
   m_JoanPlay: {fileID: -578083019, guid: 7df7088dab96ba04f98f45461fa9e9cf, type: 3}
   m_JoanNeutral: {fileID: 371536228, guid: d1098eef27d33c0449f4ffcf09539bda, type: 3}
+  m_JoanSad: {fileID: 257634512, guid: 6b42dc6784b9ffc4c86cde488fdee859, type: 3}
+  m_JoanHappy: {fileID: 157898521, guid: 6b42dc6784b9ffc4c86cde488fdee859, type: 3}
+  m_JoanHit: {fileID: -984260031, guid: 6b42dc6784b9ffc4c86cde488fdee859, type: 3}
   m_EnemySad: {fileID: -1389641409, guid: 7df7088dab96ba04f98f45461fa9e9cf, type: 3}
   m_EnemyHappy: {fileID: -1925281511, guid: d1098eef27d33c0449f4ffcf09539bda, type: 3}
   m_HeartMeterContainer: {fileID: 2403706652669836697}

@@ -14,6 +14,7 @@ public class BattleUI : MonoBehaviour
 	public UnityEvent<BattleResult> BattleFinished;
 	public float RevealAnimationDuration = 0.75f;
 	public float MaxCursorDisplacement = 120;
+	public bool isHit = false;
 	[HideInInspector]
 	public Battle Battle;
 
@@ -22,6 +23,12 @@ public class BattleUI : MonoBehaviour
 	private Sprite m_JoanPlay;
 	[SerializeField]
 	private Sprite m_JoanNeutral;
+	[SerializeField]
+	private Sprite m_JoanSad;
+	[SerializeField]
+	private Sprite m_JoanHappy;
+	[SerializeField]
+	private Sprite m_JoanHit;
 	[SerializeField]
 	private Sprite m_EnemySad;
 	[SerializeField]
@@ -130,18 +137,28 @@ public class BattleUI : MonoBehaviour
 	private void OnSideChanged()
 	{
 		SideChanged?.Invoke(Battle.Side);
-
-		if (Battle.Side == Side.BrokenHeart)
-		{
-			m_Joan.sprite = m_JoanNeutral;
-			m_Enemy.sprite = m_EnemySad;
-		}
-		else if (Battle.Side == Side.FullHeart)
-		{
-			m_Joan.sprite = m_JoanPlay;
+		if(isHit == true){
+			m_Joan.sprite = m_JoanHit;
 			m_Enemy.sprite = m_EnemyHappy;
+			isHit = false;
 		}
-
+		else
+		{
+			if (Battle.Side == Side.BrokenHeart)
+			{
+				m_Joan.sprite = m_JoanSad;
+				m_Enemy.sprite = m_EnemySad;
+			}
+			else if (Battle.Side == Side.FullHeart)
+			{
+				m_Joan.sprite = m_JoanHappy;
+				m_Enemy.sprite = m_EnemyHappy;
+			}
+			else if (Battle.Side == Side.Neutral)
+			{
+				m_Joan.sprite = m_JoanNeutral;
+			}
+		}
 		JoltImage(m_Joan);
 		JoltImage(m_Enemy);
 	}
