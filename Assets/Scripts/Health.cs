@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    public UnityEvent OnHealed;
-    public UnityEvent OnDamaged;
+    public UnityEvent Healed;
+    public UnityEvent Damaged;
 
     public int MaxHealth = 10;
 
@@ -16,23 +16,23 @@ public class Health : MonoBehaviour
 
     public bool ChangeHealth(int amount)
     {
-        var previousPoints = m_Points;
+        var prevHealthPoints = m_Points;
 
         m_Points += amount;
         m_Points = Mathf.Clamp(m_Points, 0, MaxHealth);
 
-        if (previousPoints == m_Points)
+        if (prevHealthPoints == m_Points)
         {
             return false;
         }
 
         if (amount > 0)
         {
-            OnHealed?.Invoke();
+            Healed?.Invoke();
         }
         else
         {
-            OnDamaged?.Invoke();
+            Damaged?.Invoke();
         }
 
         return true;
