@@ -45,7 +45,7 @@ public class Mirror : MonoBehaviour, IInteractable
 
         if (mirrorCutscene != null)
         {
-			mirrorCutscene.Play();
+			mirrorCutscene.Play(DoorColor);
 		}
 	}
 }

@@ -12,22 +12,24 @@ public class MirrorCutscene : MonoBehaviour
 
 	private Camera m_MirrorCamera;
 	private Animator m_MirrorAnimator;
+	private Animator m_BubblesAnimator;
 	//private GameObject m_Player;
 	private PlayerController m_Player;
 
-	public void Play()
+	public void Play(DoorColor doorColor)
 	{
 		StopAllCoroutines();
-		StartCoroutine(PlayCutscene());
+		StartCoroutine(PlayCutscene(doorColor));
 	}
 
-	private IEnumerator PlayCutscene()
+	private IEnumerator PlayCutscene(DoorColor doorColor)
 	{
 		//m_Player.SetActive(false);
 		m_Player.enabled = false;
 
 		m_MirrorCamera.gameObject.SetActive(true);
 		m_MirrorAnimator.Play("EnterInMirror");
+		m_BubblesAnimator.Play($"Mirror_bubbles_{doorColor.name}");
 
 		yield return new WaitForSeconds(InMirrorDuration);
 
@@ -74,5 +76,7 @@ public class MirrorCutscene : MonoBehaviour
 		Destroy(m_MirrorCamera.GetComponent<StudioEventEmitter>());
 
 		m_MirrorAnimator = roots[1].GetComponent<Animator>();
+
+		m_BubblesAnimator = GameObject.Find("/Mirror/BUBBLES").GetComponent<Animator>();
 	}
 }
