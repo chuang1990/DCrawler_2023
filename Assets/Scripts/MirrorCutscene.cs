@@ -76,13 +76,13 @@ public class MirrorCutscene : MonoBehaviour
 			root.transform.position += Vector3.right * 50;
 		}
 
-		m_MirrorCamera = roots[1].GetComponentInChildren<Camera>();
+		m_MirrorCamera = GameObject.Find("/PostProcessA/Main Camera").GetComponent<Camera>();
 		m_MirrorCamera.gameObject.SetActive(false);
 
 		Destroy(m_MirrorCamera.GetComponent<StudioListener>());
 		Destroy(m_MirrorCamera.GetComponent<StudioEventEmitter>());
 
-		m_MirrorAnimator = roots[1].GetComponent<Animator>();
+		m_MirrorAnimator = GameObject.Find("/PostProcessA").GetComponent<Animator>();
 
 		m_BubblesAnimator = GameObject.Find("/Mirror/BUBBLES").GetComponent<Animator>();
 	}
