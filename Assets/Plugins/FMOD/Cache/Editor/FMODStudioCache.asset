@@ -70,10 +70,10 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638165168857490378
+  lastModified: 638165524135183211
   FileSizes:
   - Name: Desktop
-    Value: 25837440
+    Value: 25837600
   Exists: 1
 --- !u!114 &-8661439769842289680
 MonoBehaviour:
@@ -1047,7 +1047,7 @@ MonoBehaviour:
   - {fileID: -8665283806447227563}
   StringsBanks:
   - {fileID: 7461980479778903255}
-  cacheTime: 638165168857490378
+  cacheTime: 638165524135244169
   cacheVersion: 131603
 --- !u!114 &277619581248277811
 MonoBehaviour:
@@ -1834,7 +1834,7 @@ MonoBehaviour:
   Path: DCrawler_2023/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638164925155384097
+  lastModified: 638165524135244169
   FileSizes:
   - Name: Desktop
     Value: 2408
