@@ -79,6 +79,7 @@ public class BattleUI : MonoBehaviour
 
 	private void Start()
 	{
+		
 		foreach (var image in GetComponentsInChildren<Image>())
 		{
 			m_DefaultScales[image] = image.rectTransform.localScale;
@@ -91,7 +92,7 @@ public class BattleUI : MonoBehaviour
 		{
 			return;
 		}
-
+		enemy_type = Battle.Enemy.enemy_type;
 		LeanTween.move(m_JoanContainer, Vector3.zero, RevealAnimationDuration)
 			 .setFrom(new Vector3(-m_JoanContainer.rect.width, 0))
 			.setEaseOutBack();

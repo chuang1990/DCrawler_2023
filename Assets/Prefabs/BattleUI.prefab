@@ -222,7 +222,7 @@ RectTransform:
   m_GameObject: {fileID: 2133751439898919296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7867, y: 1.7867, z: 1.7867}
+  m_LocalScale: {x: 1.7646301, y: 1.7646301, z: 1.7646301}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3867477068177173376}
@@ -230,7 +230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 13.472, y: -27}
+  m_AnchoredPosition: {x: -7, y: -15.33}
   m_SizeDelta: {x: 265.59998, y: 424.4}
   m_Pivot: {x: 1, y: 0}
 --- !u!222 &3713291781764405792
@@ -979,13 +979,20 @@ MonoBehaviour:
   RevealAnimationDuration: 0.75
   MaxCursorDisplacement: 120
   isHit: 0
+  enemy_type: 0
   m_JoanPlay: {fileID: -578083019, guid: 7df7088dab96ba04f98f45461fa9e9cf, type: 3}
   m_JoanNeutral: {fileID: 371536228, guid: d1098eef27d33c0449f4ffcf09539bda, type: 3}
   m_JoanSad: {fileID: 257634512, guid: 6b42dc6784b9ffc4c86cde488fdee859, type: 3}
   m_JoanHappy: {fileID: 157898521, guid: 6b42dc6784b9ffc4c86cde488fdee859, type: 3}
   m_JoanHit: {fileID: -984260031, guid: 6b42dc6784b9ffc4c86cde488fdee859, type: 3}
-  m_EnemySad: {fileID: -1389641409, guid: 7df7088dab96ba04f98f45461fa9e9cf, type: 3}
-  m_EnemyHappy: {fileID: -1925281511, guid: d1098eef27d33c0449f4ffcf09539bda, type: 3}
+  m_EnemySadA: {fileID: 0}
+  m_EnemyHappyA: {fileID: 0}
+  m_EnemySadB: {fileID: 0}
+  m_EnemyHappyB: {fileID: 0}
+  m_EnemySadC: {fileID: 0}
+  m_EnemyHappyC: {fileID: 0}
+  m_EnemySadD: {fileID: 0}
+  m_EnemyHappyD: {fileID: 0}
   m_HeartMeterContainer: {fileID: 2403706652669836697}
   m_JoanContainer: {fileID: 2296432318263552028}
   m_EnemyContainer: {fileID: 3867477068177173376}

@@ -14,6 +14,8 @@ public class EnemyController : MonoBehaviour
 	private TileMovement m_Player;
 	private PathFinder m_PathFinder;
 
+	public BattleUI.EnemyType enemy_type;
+
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.CompareTag("Player"))
