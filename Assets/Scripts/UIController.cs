@@ -22,19 +22,23 @@ public class UIController : MonoBehaviour
 	private void Awake()
 	{
 		m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+		//m_Interactable.gameObject.SetActive(false);
 	}
 
 	private void Update()
 	{
-		if (m_Player.Interactable != null)
-		{
-			m_Interactable.gameObject.SetActive(true);
-			m_Interactable.text = m_Player.Interactable.PopupMessage;
-		}
-		else
-		{
-			m_Interactable.gameObject.SetActive(false);
-		}
+		m_Interactable.text = m_Player.Interactable != null ? "!!" : "";
+
+		//if (m_Player.Interactable != null)
+		//{
+		//	m_Interactable.gameObject.SetActive(true);
+		//	m_Interactable.text = "!!";
+		//}
+		//else
+		//{
+		//	m_Interactable.gameObject.SetActive(false);
+		//}
 	}
 
 	public void OnBattleInitiated(EnemyController enemy)
