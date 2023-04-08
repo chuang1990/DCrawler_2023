@@ -55,6 +55,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8665283806447227563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: DCrawler_2023/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638165437222169576
+  FileSizes:
+  - Name: Desktop
+    Value: 25837440
+  Exists: 1
 --- !u!114 &-8661439769842289680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,6 +129,117 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8077961681238446049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/InstMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/InstMash
+  Guid:
+    Data1: 857698695
+    Data2: 1209328298
+    Data3: -1438819154
+    Data4: 50892721
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3594883945000852792}
+  - {fileID: -5181993165965733358}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-7926201194801922986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EnemyBeats/Enemyloops
+  m_EditorClassIdentifier: 
+  Name: Enemyloops
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1765735851
+    data2: 2846890467
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drumloop
+  - Pianoloop
+  - Guitarloop
+  Exists: 1
+--- !u!114 &-7455163983273238454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/EnemyDrums
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/EnemyDrums
+  Guid:
+    Data1: -1509004332
+    Data2: 1297946759
+    Data3: 1852116384
+    Data4: -208163636
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6987192922646770865}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
+--- !u!114 &-7292443483765356685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DoorClose
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DoorClose
+  Guid:
+    Data1: 1725298072
+    Data2: 1273313846
+    Data3: -1916586608
+    Data4: 1952929808
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7061788677175114057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,6 +267,114 @@ MonoBehaviour:
   - Pianoloop
   - Guitarloop
   Exists: 1
+--- !u!114 &-6987192922646770865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EnemyDrums/Enemyloops
+  m_EditorClassIdentifier: 
+  Name: Enemyloops
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1765735851
+    data2: 2846890467
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drumloop
+  - Pianoloop
+  - Guitarloop
+  Exists: 1
+--- !u!114 &-6811261097852825517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playerwin
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playerwin
+  Guid:
+    Data1: -2051101023
+    Data2: 1304801532
+    Data3: 1394742942
+    Data4: -1683897432
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5999470849817078311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playerhurt
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playerhurt
+  Guid:
+    Data1: -806151319
+    Data2: 1193546111
+    Data3: 632768416
+    Data4: 1035286102
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5629122312373550315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Mirror
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Mirror
+  Guid:
+    Data1: -2061558744
+    Data2: 1241854866
+    Data3: 200253109
+    Data4: -85456543
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 83165
 --- !u!114 &-5253559130717115287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +403,112 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 79060
+--- !u!114 &-5181993165965733358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InstMash/Health
+  m_EditorClassIdentifier: 
+  Name: Health
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 100
+  ID:
+    data1: 3694601960
+    data2: 707127528
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4069504079212349527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Explore
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Explore
+  Guid:
+    Data1: -1933626441
+    Data2: 1132903037
+    Data3: 2102798505
+    Data4: 461319271
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 123793
+--- !u!114 &-3906492752754910859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: snapshot:/New Group/hearingloss
+  m_EditorClassIdentifier: 
+  Path: snapshot:/New Group/hearingloss
+  Guid:
+    Data1: -1478037393
+    Data2: 1324581235
+    Data3: 792903316
+    Data4: -611285040
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3500714887591799390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PianoMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/PianoMash
+  Guid:
+    Data1: 94072023
+    Data2: 1254018186
+    Data3: 1579063738
+    Data4: 1420138514
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -587783513014597949}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
 --- !u!114 &-3452322556209188865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,6 +727,60 @@ MonoBehaviour:
   - Pianoloop
   - Guitarloop
   Exists: 1
+--- !u!114 &-1347584759407630317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Menu
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Menu
+  Guid:
+    Data1: 225624782
+    Data2: 1321891299
+    Data3: -930719326
+    Data4: -21228668
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 88726
+--- !u!114 &-1168471392956677360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UIClick
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UIClick
+  Guid:
+    Data1: -1721932940
+    Data2: 1309382708
+    Data3: 1357909431
+    Data4: 119466737
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-958735931906405659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +792,33 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/EnemyGtr/Enemyloops
+  m_EditorClassIdentifier: 
+  Name: Enemyloops
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1765735851
+    data2: 2846890467
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drumloop
+  - Pianoloop
+  - Guitarloop
+  Exists: 1
+--- !u!114 &-655555711236068466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EnemyPiano/Enemyloops
   m_EditorClassIdentifier: 
   Name: Enemyloops
   StudioPath: 
@@ -436,6 +862,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-587783513014597949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PianoMash/Instmash
+  m_EditorClassIdentifier: 
+  Name: Instmash
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1045902531
+    data2: 4237892517
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drums
+  - Piano
+  - Guitar
+  Exists: 1
+--- !u!114 &-414128953710409378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/GuitarMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/GuitarMash
+  Guid:
+    Data1: -1228756580
+    Data2: 1227567387
+    Data3: -1899096677
+    Data4: -1033743008
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7752405455734918072}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3750
 --- !u!114 &-412021409901880495
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,6 +972,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 18000
+--- !u!114 &-127169577478954212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/EnemyGtr
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/EnemyGtr
+  Guid:
+    Data1: 894419274
+    Data2: 1164469697
+    Data3: -268095329
+    Data4: -1174917946
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 4125987589012584789}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 24163
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -504,42 +1013,69 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 2523164107246164956}
-  - {fileID: 2191626475433791751}
+  - {fileID: 7461980479778903255}
+  - {fileID: -8665283806447227563}
   EditorEvents:
-  - {fileID: -3452322556209188865}
-  - {fileID: -3175200204973321547}
-  - {fileID: -600740485445105109}
-  - {fileID: -5253559130717115287}
-  - {fileID: -8803052932759885443}
-  - {fileID: -3212313080549975817}
-  - {fileID: 3356299520093929293}
-  - {fileID: -1791994110938742985}
-  - {fileID: 3383714782420191204}
-  - {fileID: -9083787323972741110}
-  - {fileID: 3522372308643885322}
-  - {fileID: 8437416475014977856}
-  - {fileID: -412021409901880495}
-  - {fileID: -8661439769842289680}
-  - {fileID: -2924180151645285081}
-  - {fileID: -8317661329630483883}
-  - {fileID: 4786583866934672651}
-  - {fileID: -226937533257102518}
-  - {fileID: 787833031374695189}
-  - {fileID: -2870617237262034172}
-  - {fileID: 1401105003979464585}
-  - {fileID: -2275674628910637140}
-  - {fileID: 6910309622015111656}
-  - {fileID: 4058016093846491455}
-  - {fileID: 4451423604207002627}
-  - {fileID: 6361763121377429835}
+  - {fileID: 5676088325142707873}
+  - {fileID: -5629122312373550315}
+  - {fileID: 5145098674817867332}
+  - {fileID: -127169577478954212}
+  - {fileID: 3060036108958353408}
+  - {fileID: 277619581248277811}
+  - {fileID: 1414060997632712078}
+  - {fileID: 597043758967467082}
+  - {fileID: -5999470849817078311}
+  - {fileID: -3906492752754910859}
+  - {fileID: -1168471392956677360}
+  - {fileID: 8523395869155522158}
+  - {fileID: 8649134726226102693}
+  - {fileID: -8077961681238446049}
+  - {fileID: -7292443483765356685}
+  - {fileID: -414128953710409378}
+  - {fileID: -6811261097852825517}
+  - {fileID: 7918980352587308387}
+  - {fileID: -4069504079212349527}
+  - {fileID: 1429175920680661003}
+  - {fileID: 7059981220327238359}
+  - {fileID: 7718365168187933994}
+  - {fileID: 5810286622457152960}
+  - {fileID: -1347584759407630317}
+  - {fileID: -7455163983273238454}
+  - {fileID: -3500714887591799390}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2191626475433791751}
+  - {fileID: -8665283806447227563}
   StringsBanks:
-  - {fileID: 2523164107246164956}
+  - {fileID: 7461980479778903255}
   cacheTime: 638165437222214260
   cacheVersion: 131603
+--- !u!114 &277619581248277811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DoorOpen
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DoorOpen
+  Guid:
+    Data1: 1436175698
+    Data2: 1128111829
+    Data3: 601840036
+    Data4: 170379620
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &278927069931703524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -567,6 +1103,34 @@ MonoBehaviour:
   - Piano
   - Guitar
   Exists: 1
+--- !u!114 &597043758967467082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/EnemyPiano
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/EnemyPiano
+  Guid:
+    Data1: -1154881702
+    Data2: 1236599569
+    Data3: 194823580
+    Data4: -2052343960
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -655555711236068466}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 18000
 --- !u!114 &787833031374695189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +1159,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 8000
+--- !u!114 &1083576346572334462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Dungeon/enterdungeon
+  m_EditorClassIdentifier: 
+  Name: enterdungeon
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4213787538
+    data2: 2733847044
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &1401105003979464585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -623,6 +1211,61 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 24163
+--- !u!114 &1414060997632712078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Footsteps
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Footsteps
+  Guid:
+    Data1: 587917396
+    Data2: 1331369042
+    Data3: 478405289
+    Data4: -402951894
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1429175920680661003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/EnemyBeats
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/EnemyBeats
+  Guid:
+    Data1: -305095750
+    Data2: 1201961490
+    Data3: -1528038487
+    Data4: 1437209104
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -7926201194801922986}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2000074950983839970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +1333,60 @@ MonoBehaviour:
   - Name: Desktop
     Value: 2408
   Exists: 1
+--- !u!114 &2732352846623124301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DrumMash/Instmash
+  m_EditorClassIdentifier: 
+  Name: Instmash
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1045902531
+    data2: 4237892517
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drums
+  - Piano
+  - Guitar
+  Exists: 1
+--- !u!114 &3060036108958353408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/PillPickup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/PillPickup
+  Guid:
+    Data1: -114971567
+    Data2: 1142418495
+    Data3: 1694727054
+    Data4: 775186060
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4903
 --- !u!114 &3356299520093929293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -774,6 +1471,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4903
+--- !u!114 &3594883945000852792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/InstMash/Instmash
+  m_EditorClassIdentifier: 
+  Name: Instmash
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1045902531
+    data2: 4237892517
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drums
+  - Piano
+  - Guitar
+  Exists: 1
 --- !u!114 &4058016093846491455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -801,6 +1525,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &4125987589012584789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/EnemyGtr/Enemyloops
+  m_EditorClassIdentifier: 
+  Name: Enemyloops
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1765735851
+    data2: 2846890467
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drumloop
+  - Pianoloop
+  - Guitarloop
+  Exists: 1
 --- !u!114 &4451423604207002627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -855,6 +1606,87 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 88726
+--- !u!114 &5145098674817867332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Hearing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Hearing
+  Guid:
+    Data1: -176335561
+    Data2: 1140214359
+    Data3: -575171928
+    Data4: -1497473319
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
+--- !u!114 &5676088325142707873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/UIHover
+  m_EditorClassIdentifier: 
+  Path: event:/UI/UIHover
+  Guid:
+    Data1: 93796127
+    Data2: 1136931302
+    Data3: -711112566
+    Data4: 169030491
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5810286622457152960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/PlayerMad
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/PlayerMad
+  Guid:
+    Data1: 2089692102
+    Data2: 1111427855
+    Data3: -1132898656
+    Data4: -36631444
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6361763121377429835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,6 +1765,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 10000
+--- !u!114 &7059981220327238359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/PlayerMirror
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/PlayerMirror
+  Guid:
+    Data1: 223389627
+    Data2: 1090915173
+    Data3: -348391802
+    Data4: -1693579014
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7344875831045620103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,6 +1819,108 @@ MonoBehaviour:
   - Piano
   - Guitar
   Exists: 1
+--- !u!114 &7461980479778903255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: DCrawler_2023/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638165437222214260
+  FileSizes:
+  - Name: Desktop
+    Value: 2408
+  Exists: 1
+--- !u!114 &7718365168187933994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Dungeon
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Dungeon
+  Guid:
+    Data1: 564227012
+    Data2: 1207352337
+    Data3: 853527733
+    Data4: 176506615
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 1083576346572334462}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 79060
+--- !u!114 &7752405455734918072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GuitarMash/Instmash
+  m_EditorClassIdentifier: 
+  Name: Instmash
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 1045902531
+    data2: 4237892517
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - Drums
+  - Piano
+  - Guitar
+  Exists: 1
+--- !u!114 &7918980352587308387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/PlayerAttack
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/PlayerAttack
+  Guid:
+    Data1: 684127656
+    Data2: 1089835887
+    Data3: -787782776
+    Data4: 478172322
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8140085648819782256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,6 +1992,61 @@ MonoBehaviour:
     Data4: 1035286102
   Banks:
   - {fileID: 2191626475433791751}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8523395869155522158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/DrumMash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/DrumMash
+  Guid:
+    Data1: -40332162
+    Data2: 1196638453
+    Data3: 1268578187
+    Data4: 769375077
+  Banks:
+  - {fileID: -8665283806447227563}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2732352846623124301}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1000
+--- !u!114 &8649134726226102693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VOX/Playernoises
+  m_EditorClassIdentifier: 
+  Path: event:/VOX/Playernoises
+  Guid:
+    Data1: 426686341
+    Data2: 1196294245
+    Data3: -1962314839
+    Data4: 494285838
+  Banks:
+  - {fileID: -8665283806447227563}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
