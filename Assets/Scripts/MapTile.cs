@@ -14,9 +14,14 @@ public class MapTile : TileBase
 	{
 		tileData.gameObject = Prefab;
 		if (Prefab == null) return;
-		
+
+
+#if UNITY_EDITOR
 		var texture = AssetPreview.GetAssetPreview(Prefab);
 		if (texture == null) return;
+#else
+		return;
+#endif
 
 		tileData.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
 	}
