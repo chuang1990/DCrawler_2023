@@ -1,11 +1,11 @@
-using FMODUnity;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.EditorTools;
-using UnityEditor.ShortcutManagement;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.Tilemaps;
+//using FMODUnity;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEditor.EditorTools;
+//using UnityEditor.ShortcutManagement;
+//using UnityEditor;
+//using UnityEngine;
+//using UnityEngine.Tilemaps;
 
 //[CustomEditor(typeof(Tilemap))]
 //public class LevelScriptEditor : Editor
