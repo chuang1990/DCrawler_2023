@@ -29,10 +29,6 @@ public class BattleUI : MonoBehaviour
 	private Sprite m_JoanHappy;
 	[SerializeField]
 	private Sprite m_JoanHit;
-	[SerializeField]
-	private Sprite m_EnemySad;
-	[SerializeField]
-	private Sprite m_EnemyHappy;
 	[Header("UI Elements")]
 	[SerializeField]
 	private RectTransform m_HeartMeterContainer;
@@ -95,7 +91,7 @@ public class BattleUI : MonoBehaviour
 		m_Stance.sprite = GetButtonSprite(Battle.Stance);
 
 		m_Joan.sprite = m_JoanNeutral;
-		m_Enemy.sprite = m_EnemyHappy;
+		m_Enemy.sprite = Battle.Enemy.Type.Happy;
 	}
 
 	private void OnDisable()
@@ -148,7 +144,7 @@ public class BattleUI : MonoBehaviour
 		SideChanged?.Invoke(Battle.Side);
 		if(isHit == true){
 			m_Joan.sprite = m_JoanHit;
-			m_Enemy.sprite = m_EnemyHappy;
+			m_Enemy.sprite = Battle.Enemy.Type.Happy;
 			isHit = false;
 		}
 		else
@@ -156,12 +152,12 @@ public class BattleUI : MonoBehaviour
 			if (Battle.Side == Side.BrokenHeart)
 			{
 				m_Joan.sprite = m_JoanSad;
-				m_Enemy.sprite = m_EnemySad;
+				m_Enemy.sprite = Battle.Enemy.Type.Sad;
 			}
 			else if (Battle.Side == Side.FullHeart)
 			{
 				m_Joan.sprite = m_JoanHappy;
-				m_Enemy.sprite = m_EnemyHappy;
+				m_Enemy.sprite = Battle.Enemy.Type.Happy;
 			}
 			else if (Battle.Side == Side.Neutral)
 			{

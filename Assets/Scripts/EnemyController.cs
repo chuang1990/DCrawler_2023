@@ -8,6 +8,7 @@ using UnityEngine.Tilemaps;
 public class EnemyController : MonoBehaviour
 {
 	public int PursueDistance = 3;
+	public EnemyType Type;
 
 	private TileMovement m_TileMovement;
 	private Vector2Int m_StartingPosition;
