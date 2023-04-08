@@ -75,15 +75,31 @@ public class BattleUI : MonoBehaviour
 	private Image m_ControlB;
 	[SerializeField]
 	private Image m_ControlC;
+	[Header("FX")]
+	[SerializeField]
+	private Animator m_MashFXButtonA;
+	[SerializeField]
+	private Animator m_MashFXButtonB;
+	[SerializeField]
+	private Animator m_MashFXButtonC;
+	[SerializeField]
+	private Animator m_JoanMusicFX;
+	[SerializeField]
+	private Animator m_EnemyMusicFX;
 	private Dictionary<Image, Vector3> m_DefaultScales = new Dictionary<Image, Vector3>();
+	private float LastButtonMashTime;
 
 	private void Start()
 	{
-		
 		foreach (var image in GetComponentsInChildren<Image>())
 		{
 			m_DefaultScales[image] = image.rectTransform.localScale;
 		}
+	}
+
+	private void Update()
+	{
+		m_JoanMusicFX.gameObject.SetActive(Time.time - LastButtonMashTime < 0.5f);
 	}
 
 	private void OnEnable()
@@ -92,7 +108,9 @@ public class BattleUI : MonoBehaviour
 		{
 			return;
 		}
+
 		enemy_type = Battle.Enemy.enemy_type;
+		
 		LeanTween.move(m_JoanContainer, Vector3.zero, RevealAnimationDuration)
 			 .setFrom(new Vector3(-m_JoanContainer.rect.width, 0))
 			.setEaseOutBack();
@@ -113,8 +131,6 @@ public class BattleUI : MonoBehaviour
 		m_Cursor.rectTransform.anchoredPosition = Vector2.zero;
 
 		m_Stance.sprite = GetButtonSprite(Battle.Stance);
-
-		
 
 		switch (enemy_type)
         {
@@ -163,9 +179,14 @@ public class BattleUI : MonoBehaviour
 
 		MashButton(GetButtonImage(button));
 
+		var buttonMashFXAnimator = GetButtonMashFXAnimator(button);
+		buttonMashFXAnimator.Play(Random.value > 0.5f ? "Mash" : "Mash2");
+
 		LeanTween.cancel(m_Cursor.gameObject);
 		LeanTween.move(m_Cursor.rectTransform, new Vector3(-Battle.HeartMeter * MaxCursorDisplacement, 0), 0.1f)
 			.setEaseOutBack();
+
+		LastButtonMashTime = Time.time;
 	}
 
 	private void OnStanceChanged()
@@ -192,7 +213,9 @@ public class BattleUI : MonoBehaviour
 	private void OnSideChanged()
 	{
 		SideChanged?.Invoke(Battle.Side);
-		if(isHit == true){
+
+		if (isHit)
+		{
 			m_Joan.sprite = m_JoanHit;
 			m_Enemy.sprite = m_EnemyHappy;
 			isHit = false;
@@ -214,6 +237,9 @@ public class BattleUI : MonoBehaviour
 				m_Joan.sprite = m_JoanNeutral;
 			}
 		}
+
+		m_EnemyMusicFX.gameObject.SetActive(m_Enemy.sprite == m_EnemyHappy);
+
 		JoltImage(m_Joan);
 		JoltImage(m_Enemy);
 	}
@@ -241,6 +267,17 @@ public class BattleUI : MonoBehaviour
 		LeanTween.scale(button.rectTransform, scale, 0.1f)
 			.setEaseInBack()
 			.setFrom(scale * 1.25f);
+	}
+
+	private Animator GetButtonMashFXAnimator(Button button)
+	{
+		return button switch
+		{
+			Button.A => m_MashFXButtonA,
+			Button.B => m_MashFXButtonB,
+			Button.C => m_MashFXButtonC,
+			_ => throw new System.NotImplementedException()
+		};
 	}
 
 	private Vector3 GetDefaultScale(Image image)
