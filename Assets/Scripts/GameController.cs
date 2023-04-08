@@ -14,6 +14,13 @@ public class GameController : MonoBehaviour
 
 		GameEvents.Instance.OnBattleInitiated.AddListener(OnBattleInitiated);
 		GameEvents.Instance.OnBattleFinished.AddListener(OnBattleFinished);
+
+		m_Player.GetComponent<Health>().Died.AddListener(OnPlayerDied);
+	}
+
+	private void OnPlayerDied()
+	{
+		Debug.Log("Player died!");
 	}
 
     public void OnBattleInitiated(EnemyController enemy)

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
@@ -9,7 +10,10 @@ public class UIController : MonoBehaviour
 	private GameObject m_BattleUI;
 	[SerializeField]
 	private TMP_Text m_Interactable;
+	[SerializeField]
+	private Image m_HealthBar;
 	private PlayerController m_Player;
+	private Health m_PlayerHealth;
 
 	private void Start()
 	{
@@ -22,6 +26,7 @@ public class UIController : MonoBehaviour
 	private void Awake()
 	{
 		m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+		m_PlayerHealth = m_Player.GetComponent<Health>();
 
 		//m_Interactable.gameObject.SetActive(false);
 	}
@@ -39,6 +44,8 @@ public class UIController : MonoBehaviour
 		//{
 		//	m_Interactable.gameObject.SetActive(false);
 		//}
+
+		m_HealthBar.fillAmount = m_PlayerHealth.Percentage;
 	}
 
 	public void OnBattleInitiated(EnemyController enemy)

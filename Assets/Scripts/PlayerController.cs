@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
 			TurnRight();
 		}
 
-		if (Input.GetMouseButtonDown(0))
+		if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
 		{
 			Interact();
 		}

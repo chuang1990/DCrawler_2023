@@ -6,13 +6,19 @@ public class BattleController : MonoBehaviour
 {
 	public float MinStanceDuration = 2;
 	public float MaxStanceDuration = 5;
-	public float ChangeSideHealthPenalty = 2;
 	public float MashHeartMeterIncrement = 0.01f;
+	public int ChangeSideHealthPenalty = 1;
 
 	[SerializeField]
 	private BattleUI m_BattleUI;
 
 	private Battle m_Battle;
+	private Health m_PlayerHealth;
+
+	private void Awake()
+	{
+		m_PlayerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+	}
 
 	private void Start()
 	{
@@ -116,6 +122,8 @@ public class BattleController : MonoBehaviour
 	private void GiveHealthPenalty()
 	{
 		Debug.Log("Health penalty!");
+
+		m_PlayerHealth.ChangeHealth(-ChangeSideHealthPenalty);
 	}
 
 	private void ChangeStance()

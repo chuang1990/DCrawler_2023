@@ -263,7 +263,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  MaxHealth: 10
+  Died:
+    m_PersistentCalls:
+      m_Calls: []
+  MaxHealth: 20
 --- !u!136 &8595075572510278676
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -194,7 +194,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  HealAmount: 1
+  HealAmount: 10
 --- !u!114 &6352133744953652854
 MonoBehaviour:
   m_ObjectHideFlags: 0
