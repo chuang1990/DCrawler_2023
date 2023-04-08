@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 	private Health m_Health;
 	[SerializeField]
 	private StudioEventEmitter m_LowHealthEventEmitter;
+	private float HoldStartTime;
 
 	public void Battle(EnemyController enemy)
 	{
@@ -71,6 +72,23 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
 		{
 			MoveForward();
+
+			HoldStartTime = Time.time;
+		}
+
+		if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+		{
+			if (Time.time - HoldStartTime > 0.3f)
+			{
+				if (!IsInvoking(nameof(MoveForward)))
+				{
+					InvokeRepeating(nameof(MoveForward), 0, 0.2f);
+				}
+			}
+		}
+		else
+		{
+			CancelInvoke(nameof(MoveForward));
 		}
 
 		if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
