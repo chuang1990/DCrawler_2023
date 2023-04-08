@@ -21,6 +21,9 @@ public class GameController : MonoBehaviour
 	private void OnPlayerDied()
 	{
 		Debug.Log("Player died!");
+
+		m_Player.enabled = false;
+		m_EnemyCoordinator.enabled = false;
 	}
 
     public void OnBattleInitiated(EnemyController enemy)

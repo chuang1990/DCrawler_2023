@@ -18,6 +18,8 @@ public class BattleController : MonoBehaviour
 	private void Awake()
 	{
 		m_PlayerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+
+		m_PlayerHealth.Died.AddListener(() => enabled = false);
 	}
 
 	private void Start()
@@ -83,6 +85,11 @@ public class BattleController : MonoBehaviour
 		if (m_Battle.Side != Side.Neutral)
 		{
 			GiveHealthPenalty();
+
+			if (m_PlayerHealth.Points == 0)
+			{
+				return;
+			}
 		}
 
 		m_Battle.Side = side;

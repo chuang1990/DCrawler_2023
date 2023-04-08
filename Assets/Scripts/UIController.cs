@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
@@ -12,6 +13,8 @@ public class UIController : MonoBehaviour
 	private TMP_Text m_Interactable;
 	[SerializeField]
 	private Image m_HealthBar;
+	[SerializeField]
+	private GameObject m_GameOver;
 	private PlayerController m_Player;
 	private Health m_PlayerHealth;
 
@@ -28,7 +31,15 @@ public class UIController : MonoBehaviour
 		m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
 		m_PlayerHealth = m_Player.GetComponent<Health>();
 
+		m_PlayerHealth.Died.AddListener(OnPlayerDied);
+
 		//m_Interactable.gameObject.SetActive(false);
+	}
+
+	private void OnPlayerDied()
+	{
+		m_BattleUI.SetActive(false);
+		m_GameOver.SetActive(true);
 	}
 
 	private void Update()
@@ -56,5 +67,15 @@ public class UIController : MonoBehaviour
 	public void OnBattleFinished(EnemyController enemy, BattleResult result)
 	{
 		m_BattleUI.SetActive(false);
+	}
+	
+	public void Retry()
+	{
+		SceneManager.LoadScene(1);
+	}
+
+	public void MainMenu()
+	{
+		SceneManager.LoadScene(0);
 	}
 }
