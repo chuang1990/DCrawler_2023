@@ -15,6 +15,7 @@ public class MirrorCutscene : MonoBehaviour
 	private Animator m_BubblesAnimator;
 	//private GameObject m_Player;
 	private PlayerController m_Player;
+	private GameObject m_UIInteractable;
 
 	public void Play(DoorColor doorColor)
 	{
@@ -24,6 +25,8 @@ public class MirrorCutscene : MonoBehaviour
 
 	private IEnumerator PlayCutscene(DoorColor doorColor)
 	{
+		m_UIInteractable.SetActive(false);
+
 		//m_Player.SetActive(false);
 		m_Player.enabled = false;
 
@@ -44,12 +47,16 @@ public class MirrorCutscene : MonoBehaviour
 
 		//m_Player.SetActive(true);
 		m_Player.enabled = true;
+
+		m_UIInteractable.SetActive(true);
 	}
 
 	private void Awake()
 	{
 		//m_Player = GameObject.FindGameObjectWithTag("Player");
 		m_Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+
+		m_UIInteractable = GameObject.Find("/UI/Interactable");
 	}
 
 	private void Start()
