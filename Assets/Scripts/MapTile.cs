@@ -19,10 +19,9 @@ public class MapTile : TileBase
 #if UNITY_EDITOR
 		var texture = AssetPreview.GetAssetPreview(Prefab);
 		if (texture == null) return;
+		tileData.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
 #else
 		return;
 #endif
-
-		tileData.sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), new Vector2(0.5f, 0.5f));
 	}
 }
