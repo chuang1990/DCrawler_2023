@@ -15,6 +15,10 @@ public class BattleUI : MonoBehaviour
 	public float RevealAnimationDuration = 0.75f;
 	public float MaxCursorDisplacement = 120;
 	public bool isHit = false;
+
+	public enum EnemyType { A, B, C, D};
+	public EnemyType enemy_type;
+
 	[HideInInspector]
 	public Battle Battle;
 
@@ -29,10 +33,25 @@ public class BattleUI : MonoBehaviour
 	private Sprite m_JoanHappy;
 	[SerializeField]
 	private Sprite m_JoanHit;
+	Sprite m_EnemyHappy;
+	Sprite m_EnemySad;
 	[SerializeField]
-	private Sprite m_EnemySad;
+	private Sprite m_EnemySadA;
 	[SerializeField]
-	private Sprite m_EnemyHappy;
+	private Sprite m_EnemyHappyA;
+	[SerializeField]
+	private Sprite m_EnemySadB;
+	[SerializeField]
+	private Sprite m_EnemyHappyB;
+	[SerializeField]
+	private Sprite m_EnemySadC;
+	[SerializeField]
+	private Sprite m_EnemyHappyC;
+	[SerializeField]
+	private Sprite m_EnemySadD;
+	[SerializeField]
+	private Sprite m_EnemyHappyD;
+
 	[Header("UI Elements")]
 	[SerializeField]
 	private RectTransform m_HeartMeterContainer;
@@ -84,6 +103,32 @@ public class BattleUI : MonoBehaviour
 		m_Cursor.rectTransform.anchoredPosition = Vector2.zero;
 
 		m_Stance.sprite = GetButtonSprite(Battle.Stance);
+
+		
+
+		switch (enemy_type)
+        {
+			case EnemyType.A:
+				m_EnemyHappy = m_EnemyHappyA;
+				m_EnemySad = m_EnemySadA;
+				break;
+			case EnemyType.B:
+				m_EnemyHappy = m_EnemyHappyB;
+				m_EnemySad = m_EnemySadB;
+				break;
+			case EnemyType.C:
+				m_EnemyHappy = m_EnemyHappyC;
+				m_EnemySad = m_EnemySadC;
+				break;
+			case EnemyType.D:
+				m_EnemyHappy = m_EnemyHappyD;
+				m_EnemySad = m_EnemySadD;
+				break;
+			default:
+				m_EnemyHappy = m_EnemyHappyA;
+				m_EnemySad = m_EnemySadA;
+				break;
+		}
 
 		m_Joan.sprite = m_JoanNeutral;
 		m_Enemy.sprite = m_EnemyHappy;
