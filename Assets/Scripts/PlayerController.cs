@@ -129,8 +129,9 @@ public class PlayerController : MonoBehaviour
 	{
 		var layerMask = LayerMask.GetMask("Default", "Wall");
 		var maxDistance = 2 * m_TileMovement.TileSize;
+		var heightOffset = 0.5f;
 
-		if (Physics.Raycast(m_Camera.transform.position, m_Camera.transform.forward, out var hit, maxDistance, layerMask))
+		if (Physics.Raycast(m_Camera.transform.position + new Vector3(0, heightOffset, 0), m_Camera.transform.forward, out var hit, maxDistance, layerMask))
 		{
 			return hit.collider.gameObject;
 		}
