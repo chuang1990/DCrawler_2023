@@ -1,3 +1,5 @@
+using FMODUnity;
+using Mono.Cecil;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,7 @@ using UnityEngine.Tilemaps;
 public class PlayerController : MonoBehaviour
 {
 	public float TurnDuration = 0.25f;
+	public int LowHealth = 5;
 
 	public IInteractable Interactable => m_Interactable;
 
@@ -16,6 +19,9 @@ public class PlayerController : MonoBehaviour
 	private Camera m_Camera;
 	private Direction m_Direction;
 	private TileMovement m_TileMovement;
+	private Health m_Health;
+	[SerializeField]
+	private StudioEventEmitter m_LowHealthEventEmitter;
 
 	public void Battle(EnemyController enemy)
 	{
@@ -26,6 +32,17 @@ public class PlayerController : MonoBehaviour
 	{
 		m_TileMovement = GetComponent<TileMovement>();
 		m_Camera = GetComponentInChildren<Camera>();
+		m_Health = GetComponent<Health>();
+
+		m_Health.Changed.AddListener(OnHealthChanged);
+	}
+
+	private void OnHealthChanged(int previous, int current)
+	{
+		if (previous > LowHealth && current <= LowHealth)
+		{
+			m_LowHealthEventEmitter.Play();
+		}
 	}
 
 	private void Start()

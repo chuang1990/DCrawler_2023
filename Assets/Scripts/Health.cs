@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
+    public UnityEvent<int, int> Changed;
     public UnityEvent Healed;
     public UnityEvent Damaged;
     public UnityEvent Died;
@@ -27,6 +28,8 @@ public class Health : MonoBehaviour
         {
             return false;
         }
+
+        Changed?.Invoke(prevHealthPoints, m_Points);
 
         if (amount > 0)
         {
