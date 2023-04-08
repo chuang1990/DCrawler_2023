@@ -75,6 +75,15 @@ public class BattleUI : MonoBehaviour
 	private Image m_ControlB;
 	[SerializeField]
 	private Image m_ControlC;
+	private Dictionary<Image, Vector3> m_DefaultScales = new Dictionary<Image, Vector3>();
+
+	private void Start()
+	{
+		foreach (var image in GetComponentsInChildren<Image>())
+		{
+			m_DefaultScales[image] = image.rectTransform.localScale;
+		}
+	}
 
 	private void OnEnable()
 	{
@@ -215,18 +224,27 @@ public class BattleUI : MonoBehaviour
 
 	private void JoltImage(Image image)
 	{
+		var scale = GetDefaultScale(image);
+
 		LeanTween.cancel(image.gameObject);
-		LeanTween.scale(image.rectTransform, Vector3.one, 0.1f)
+		LeanTween.scale(image.rectTransform, scale, 0.1f)
 			.setEaseInBack()
-			.setFrom(Vector3.one * 1.1f);
+			.setFrom(scale * 1.1f);
 	}
 
 	private void MashButton(Image button)
 	{
+		var scale = GetDefaultScale(button);
+
 		LeanTween.cancel(button.gameObject);
-		LeanTween.scale(button.rectTransform, Vector3.one, 0.1f)
+		LeanTween.scale(button.rectTransform, scale, 0.1f)
 			.setEaseInBack()
-			.setFrom(Vector3.one * 1.25f);
+			.setFrom(scale * 1.25f);
+	}
+
+	private Vector3 GetDefaultScale(Image image)
+	{
+		return m_DefaultScales.GetValueOrDefault(image);
 	}
 
 	private Image GetButtonImage(Button button)
