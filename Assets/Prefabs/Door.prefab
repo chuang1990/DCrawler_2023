@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DoorColor: {fileID: 11400000, guid: bd8ff2dd2e8162a43870cd495e1fcede, type: 2}
+  m_open_tile: {fileID: 11400000, guid: 033b8a38df244cc4f9f57dde92f55af7, type: 2}
 --- !u!1001 &855824693542779460
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     public DoorColor DoorColor;
 
 	private Tilemap m_Tilemap;
+	public TileBase m_open_tile;
 	private Vector3Int m_Position;
 
 	private void Start()
@@ -27,5 +28,6 @@ public class Door : MonoBehaviour
 	public void Open()
     {
 		m_Tilemap.SetTile(m_Position, null);
+		// m_Tilemap.SetTile(m_Position, m_open_tile);
     }
 }
